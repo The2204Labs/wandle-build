@@ -855,6 +855,59 @@ html.shot-wa #ph .ph-screen{border-radius:0}
 html.shot-wa #ph .ph-notch{display:none}
 html.shot-wa #ph .ph-head{padding-top:12px}
 
+
+/* ---------- header: client login link ---------- */
+.hdr-start{justify-self:start;display:flex;align-items:center;gap:clamp(12px,1.6vw,22px);margin-top:-10px}
+.hdr-start .menu-btn{margin-top:0}
+.login-link{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid color-mix(in srgb,currentColor 45%,transparent);color:inherit;text-decoration:none;font:500 14px var(--display);white-space:nowrap;transition:background .2s,border-color .2s,color .2s}
+.login-link svg{width:13px;height:13px}
+.login-link:hover{background:currentColor;border-color:currentColor}
+.login-link:hover span{color:#131412}
+body:not(.v-home):not(.v-contact) .login-link:hover span{color:#F7F6F2}
+.hdr.solid .hdr-start,.hdr.open .hdr-start{margin-top:0}
+body.v-login .login-link{display:none}
+
+/* ---------- login page ---------- */
+.lg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,96px);align-items:center;min-height:calc(100vh - 220px)}
+.lg h1{font-size:clamp(42px,5.6vw,88px);font-weight:600;letter-spacing:-.055em;line-height:.95}
+.lg-lede{margin:18px 0 28px;color:var(--stone-ink-2);font-size:clamp(16px,1.3vw,19px);max-width:44ch;line-height:1.5}
+.lg-form{display:grid;gap:10px;max-width:440px}
+.lg-form label{font:400 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--stone-ink-2)}
+.lg-form input{width:100%;min-height:54px;border:1px solid var(--stone-line);border-radius:12px;background:#fff;padding:0 16px;font:400 17px var(--inner);color:var(--stone-ink)}
+.lg-form input:focus{outline:2px solid var(--oak);outline-offset:1px;border-color:transparent}
+.lg-form .err{min-height:18px}
+.lg-form .btn{justify-content:center;min-height:54px;font-size:16px}
+.lg-note{font-size:13.5px;color:var(--stone-ink-2);display:flex;gap:8px;align-items:flex-start;max-width:440px;margin-top:4px}
+.lg-note svg{width:16px;height:16px;flex:none;margin-top:2px}
+.lg-sent{max-width:440px;background:#fff;border:1px solid var(--stone-line);border-radius:16px;padding:22px;display:grid;gap:14px}
+.lg-sent b{font-size:20px;font-weight:600;letter-spacing:-.03em}
+.lg-sent p{color:var(--stone-ink-2);font-size:15px}
+.lg-notif{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;background:#F4F2EE;border-radius:14px;padding:11px 12px;font-size:13.5px;line-height:1.35}
+.lg-notif .app{width:34px;height:34px;border-radius:9px;background:#25A35A;display:grid;place-items:center;color:#fff;font-weight:700}
+.lg-notif small{display:flex;justify-content:space-between;font-size:11px;color:#6B6D66;text-transform:uppercase;letter-spacing:.03em}
+.lg-alt{max-width:440px;margin-top:26px;padding-top:22px;border-top:1px solid var(--stone-line);display:grid;gap:14px}
+.lg-alt a{color:var(--stone-ink);font-weight:500}
+.lg-staff{display:flex;gap:8px;flex-wrap:wrap}
+.lg-staff a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:1px solid var(--stone-line);border-radius:999px;background:#fff;text-decoration:none;font-size:14px}
+.lg-staff a:hover{border-color:var(--stone-ink)}
+.lg-staff svg{width:13px;height:13px}
+.lg-art{margin:0;position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5;max-width:100%;background:#ECEAE4}
+.lg-art img{width:100%;height:100%;object-fit:cover}
+.lg-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,9,0) 50%,rgba(10,10,9,.55))}
+.lg-card{position:absolute;left:clamp(14px,2vw,28px);right:clamp(14px,2vw,28px);bottom:clamp(14px,2vw,28px);z-index:2;display:grid;gap:10px}
+.lg-chip{justify-self:start;display:inline-flex;align-items:center;gap:8px;background:rgba(247,246,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;padding:7px 13px;font:500 12px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:#131412}
+.lg-chip i{width:7px;height:7px;border-radius:50%;background:#3E7B4F}
+.lg-card .lg-notif{background:rgba(247,246,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-width:380px;color:#131412}
+@media (max-width:900px){
+  .lg{grid-template-columns:1fr;min-height:0}
+  .lg-art{aspect-ratio:4/3;order:-1}
+}
+@media (max-width:560px){
+  .login-link{padding:0 11px;font-size:13px;min-height:34px}
+  .login-link svg{display:none}
+  .hdr-start{gap:12px}
+}
+
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(159,210,127,.6)}70%,100%{box-shadow:0 0 0 9px rgba(159,210,127,0)}}
@@ -888,7 +941,10 @@ html.shot-wa #ph .ph-head{padding-top:12px}
 
 <header class="hdr" id="hdr">
     <div class="hdr-in">
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drop"><span>Menu</span><i aria-hidden="true"></i></button>
+      <div class="hdr-start">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drop"><span>Menu</span><i aria-hidden="true"></i></button>
+        <a class="login-link" href="#login" data-route="login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Client login</span></a>
+      </div>
       <p class="cap"><b id="capName">Burntwood Lane</b><span id="capMeta">Earlsfield SW18 · Rear extension</span></p>
       <div class="brand">
         <a class="mark" href="#home" data-route="home" aria-label="Wandle, home">
@@ -910,7 +966,7 @@ html.shot-wa #ph .ph-head{padding-top:12px}
         <div class="drop-side mono">
           <p><span>Call the studio</span><b>020 8870 4412</b></p>
           <p><span>Email</span><b>hello@wandlebuild.co.uk</b></p>
-          <p><span>Existing clients</span><a href="#yard" data-route="yard" style="color:#fff;text-decoration:underline;text-underline-offset:3px">Client login →</a></p>
+          <p><span>Existing clients</span><a href="#login" data-route="login" style="color:#fff;text-decoration:underline;text-underline-offset:3px">Client login →</a></p>
         </div>
       </div>
     </nav>
@@ -1395,6 +1451,41 @@ html.shot-wa #ph .ph-head{padding-top:12px}
     </section>
 </main>
 
+<main class="page" data-view="login" hidden aria-labelledby="login-title">
+  <div class="wrap lg">
+    <div>
+      <p class="eyebrow mono">Wandle Yard · Client login</p>
+      <h1 id="login-title">Your build, <em>in your pocket.</em></h1>
+      <p class="lg-lede">See progress, make decisions and approve extras for your project. No password to remember — we'll send a sign-in link to your phone or email.</p>
+      <form class="lg-form" id="lg-form" novalidate>
+        <label for="lg-id">Email or mobile number</label>
+        <input id="lg-id" name="id" autocomplete="username" inputmode="email" placeholder="you@example.com or 07…" aria-describedby="lg-err">
+        <span class="err" id="lg-err" aria-live="polite"></span>
+        <button class="btn dark" type="submit">Send my sign-in link <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+        <p class="lg-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Your portal only ever shows your own project. Signing documents and payments asks for a one-time code as well.</p>
+      </form>
+      <div class="lg-sent" id="lg-sent" hidden role="status">
+        <b>Check your phone</b>
+        <p id="lg-dest">We've sent a sign-in link by WhatsApp. It works once and expires in 15 minutes.</p>
+        <div class="lg-notif"><span class="app" aria-hidden="true">W</span><div><small><span>WhatsApp · Wandle Build</span><span>now</span></small><b>Your Wandle Yard sign-in link</b><br>Tap to open 14 Elms Crescent. Didn't ask for this? Ignore it.</div></div>
+        <a class="btn dark" href="#yard" data-route="yard" style="justify-content:center">Open the link (demo) <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <p class="mono" style="font-size:11px">Demo site — no message was actually sent.</p>
+      </div>
+      <div class="lg-alt">
+        <span>Just looking? <a href="#yard" data-route="yard">Open the demo as Priya &amp; Sam →</a></span>
+        <span class="mono" style="font-size:11.5px;color:var(--stone-ink-2)">Wandle staff · sign in with your work account</span>
+        <div class="lg-staff"><a href="#yard-site" data-route="yard-site">Site manager app <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a href="#yard-office" data-route="yard-office">Office dashboard <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+      </div>
+    </div>
+    <figure class="lg-art">
+      <img src="img/p-elms.webp" alt="Timber-clad rear extension at 14 Elms Crescent" loading="lazy">
+      <figcaption class="lg-card">
+        <span class="lg-chip"><i></i>14 Elms Crescent · week 19 of 26 · on track</span>
+        <span class="lg-notif"><span class="app" aria-hidden="true">W</span><span><small><span>WhatsApp · Wandle Build</span><span>Fri 16:02</span></small><b>Dan Okafor · Site manager</b><br>Week 18: screed down, steel signed off, 0 days lost. 1 decision needed by Fri.</span></span>
+      </figcaption>
+    </figure>
+  </div>
+</main>
 <main class="y" data-view="yard" hidden aria-labelledby="y-title">
   <div class="y-demo"><span><b>Demo</b> · Wandle Yard client portal · sample project and data · nothing you do here is sent anywhere</span><span><a href="https://wandle.2204labs.com/showcase.html" target="_blank" rel="noopener">See it on every device →</a> · A custom system by <a href="https://2204labs.com" target="_blank" rel="noopener">2204 Labs</a></span></div>
   <header class="y-top">
@@ -1801,7 +1892,7 @@ html.shot-wa #ph .ph-head{padding-top:12px}
         <li><a href="#process" data-route="process">Process</a></li>
         <li><a href="#area" data-route="area">Where we build</a></li>
         <li><a href="#about" data-route="about">About</a></li>
-        <li><a href="#yard" data-route="yard">Client login</a></li>
+        <li><a href="#login" data-route="login">Client login</a></li>
       </ul></div>
     </div>
     <ul class="foot-badges">
@@ -2132,6 +2223,20 @@ html.shot-wa #ph .ph-head{padding-top:12px}
     yLinks.forEach(a => io.observe(document.querySelector(a.getAttribute('href'))));
   }
 
+  // client login (magic link, demo)
+  const lgForm = document.getElementById('lg-form');
+  lgForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = document.getElementById('lg-id').value.trim(), err = document.getElementById('lg-err');
+    const isMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    if (!isMail && !/^(\+?44|0)7[\d\s]{9,12}$/.test(v)) { err.textContent = 'Enter the email or UK mobile number you gave us, e.g. you@example.com or 07700 900123.'; document.getElementById('lg-id').focus(); return; }
+    err.textContent = '';
+    document.getElementById('lg-dest').textContent = isMail
+      ? 'We\u2019ve sent a sign-in link to ' + v.replace(/^(.).*(@.*)$/, '$1\u2022\u2022\u2022$2') + ' and to the WhatsApp number on your contract. It works once and expires in 15 minutes.'
+      : 'We\u2019ve sent a sign-in link by WhatsApp to the number ending ' + v.replace(/\D/g, '').slice(-4) + '. It works once and expires in 15 minutes.';
+    lgForm.hidden = true; document.getElementById('lg-sent').hidden = false;
+  });
+
   // pages – each menu destination is its own full page, switched by #hash
   const views = [...document.querySelectorAll('[data-view]')];
   const route = () => {
@@ -2145,6 +2250,7 @@ html.shot-wa #ph .ph-head{padding-top:12px}
     setMenu(false);
     setPaused(v !== 'home' || document.hidden || userPaused);
     if (v === 'yard') document.title = ROLES[yRole].title;
+    else if (v === 'login') { document.title = 'Client login · Wandle Yard'; lgForm.hidden = false; document.getElementById('lg-sent').hidden = true; }
     else if (v !== 'case') document.title = 'Wandle Build · a 2204 Labs concept';
     window.scrollTo(0, 0);
   };
