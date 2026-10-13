@@ -607,6 +607,70 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   .y-pays li .pill{grid-column:1/-1;justify-self:start}
 }
 
+
+/* ---------- Yard: "how you'll hear from us" phone walkthrough ---------- */
+.y-notify{display:grid;grid-template-columns:300px minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center;background:#F7F6F2}
+.y-notify h2{font-size:clamp(22px,2vw,30px);letter-spacing:-.04em}
+.y-steps{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:4px}
+.y-step{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:14px;border-radius:12px;transition:background .3s;color:var(--y-ink2)}
+.y-step b{display:block;color:var(--y-ink);font-weight:500;font-size:16px;margin-bottom:3px}
+.y-step .n{width:30px;height:30px;border-radius:50%;border:1.5px solid #CFCBC2;display:grid;place-items:center;font:500 13px var(--mono);color:var(--y-ink2)}
+.y-step.on{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.y-step.on .n{background:var(--y-ink);border-color:var(--y-ink);color:#fff}
+.y-step.done .n{background:var(--y-ok-bg);border-color:var(--y-ok-bg);color:var(--y-ok)}
+.y-notify-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.ph{width:300px;max-width:100%;aspect-ratio:300/610;border-radius:44px;background:#0E0F0D;padding:11px;box-shadow:0 30px 60px -20px rgba(0,0,0,.35),inset 0 0 0 1.5px #2A2B28;position:relative}
+.ph-screen{position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:#ECE5DD;font-family:-apple-system,"SF Pro Text","Inter Tight",Arial,sans-serif;color:#111}
+.ph-notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:92px;height:26px;border-radius:20px;background:#0E0F0D;z-index:5}
+.ph-lock{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,9,.25),rgba(10,10,9,.55)),url(img/hero.webp) center/cover;color:#fff;display:flex;flex-direction:column;align-items:center;padding:58px 12px 20px;transition:opacity .45s,transform .45s var(--ease);z-index:3}
+.ph-lock .date{font-size:14px;font-weight:500;opacity:.9}
+.ph-lock .time{font-size:68px;font-weight:600;letter-spacing:-.03em;line-height:1;margin-top:2px}
+.ph-notif{margin-top:auto;width:100%;text-align:left;border:0;cursor:pointer;background:rgba(245,245,245,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#111;border-radius:18px;padding:11px 13px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;font:inherit;animation:notifIn .7s var(--ease) .4s both}
+.ph-notif .app{width:34px;height:34px;border-radius:9px;background:#25A35A;display:grid;place-items:center}
+.ph-notif .app svg{width:20px;height:20px}
+.ph-notif small{display:flex;justify-content:space-between;font-size:11.5px;color:#555;text-transform:uppercase;letter-spacing:.02em}
+.ph-notif b{display:block;font-size:14px;margin:1px 0}
+.ph-notif > span:last-child > span{font-size:13.5px;line-height:1.3;display:block}
+.ph-hint{margin-top:10px;font-size:12px;opacity:.85}
+.ph.is-chat .ph-lock{opacity:0;transform:scale(1.04);pointer-events:none}
+@keyframes notifIn{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+.ph-chat{position:absolute;inset:0;display:flex;flex-direction:column}
+.ph-head{background:#F6F6F6;padding:42px 12px 9px;display:flex;align-items:center;gap:9px;border-bottom:1px solid #DDD}
+.ph-head .av{width:32px;height:32px;border-radius:50%;background:#131412;color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px;letter-spacing:-.05em}
+.ph-head b{display:block;font-size:14.5px}
+.ph-head small{font-size:11px;color:#6B6B6B}
+.ph-body{flex:1;overflow-y:auto;padding:10px 9px 8px;display:flex;flex-direction:column;gap:7px;scroll-behavior:smooth}
+.ph-day{align-self:center;background:#E1F2FB;color:#556;font-size:11px;padding:3px 9px;border-radius:7px}
+.ph-b{max-width:88%;background:#fff;border-radius:10px;padding:7px 9px 5px;font-size:13px;line-height:1.38;box-shadow:0 1px .5px rgba(0,0,0,.13);align-self:flex-start;animation:bubIn .35s var(--ease) both}
+.ph-b.me{align-self:flex-end;background:#DCF8C6}
+.ph-b em{display:block;text-align:right;font-style:normal;font-size:10px;color:#8A8A8A;margin-top:2px}
+.ph-b strong{font-weight:600}
+.ph-thumbs{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px;height:112px;margin:-2px -4px 6px;border-radius:7px;overflow:hidden}
+.ph-thumbs img{width:100%;height:100%;object-fit:cover}
+.ph-thumbs > img:first-child{grid-row:span 2}
+.ph-thumbs span{position:relative;display:block}
+.ph-thumbs span::after{content:"+3";position:absolute;inset:0;background:rgba(0,0,0,.45);color:#fff;display:grid;place-items:center;font-weight:600;font-size:15px}
+.ph-btns{display:grid;margin:6px -9px -5px;border-top:1px solid #EEE}
+.ph-btns button{border:0;background:#fff;color:#0B83D9;font-weight:500;font-size:13.5px;font-family:inherit;padding:9px;cursor:pointer;border-top:1px solid #EEE}
+.ph-btns button:first-child{border-top:0}
+.ph-btns button:last-child{border-radius:0 0 10px 10px}
+.ph-btns button.pulse{animation:tapMe 1.6s ease-in-out infinite}
+.ph-btns button:disabled{color:#3E7B4F;cursor:default;animation:none}
+.ph-bar{background:#F6F6F6;padding:7px 8px 14px;border-top:1px solid #DDD;display:grid;gap:6px}
+.ph-quick{border:1px solid #CFE6D5;background:#fff;color:#1D7A44;border-radius:16px;padding:6px 10px;font-weight:500;font-size:12.5px;font-family:inherit;cursor:pointer;text-align:left}
+.ph-quick:disabled{opacity:.45;cursor:default}
+.ph-input{background:#fff;border-radius:18px;padding:7px 12px;font-size:13px;color:#9A9A9A}
+@keyframes bubIn{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes tapMe{0%,100%{background:#fff}50%{background:#E7F3FC}}
+.y-flash{animation:yFlash 2.2s ease}
+@keyframes yFlash{0%,100%{box-shadow:0 0 0 0 rgba(122,92,58,0)}20%{box-shadow:0 0 0 6px rgba(122,92,58,.35)}}
+.y-msg .via{display:inline-block;margin-left:6px;font:500 10px var(--mono);letter-spacing:.04em;background:#E5F0E6;color:#3E7B4F;padding:1px 6px;border-radius:4px;vertical-align:1px}
+.y-msg.me .via{background:rgba(255,255,255,.15);color:#CFE6D5}
+@media (max-width:900px){
+  .y-notify{grid-template-columns:1fr;justify-items:center}
+  .y-notify > div{width:100%}
+}
+
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(159,210,127,.6)}70%,100%{box-shadow:0 0 0 9px rgba(159,210,127,0)}}
@@ -1162,6 +1226,7 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   <div class="y-shell">
     <nav class="y-nav" aria-label="Portal">
       <a href="#y-overview" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg> Overview</a>
+      <a href="#y-notify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg> On your phone</a>
       <a href="#y-programme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Programme</a>
       <a href="#y-decisions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg> Decisions <span class="n" id="y-dec-count">2</span></a>
       <a href="#y-extras"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Extras <span class="n" id="y-ex-count">2</span></a>
@@ -1184,6 +1249,48 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
           <div><b>73%</b><span>Build complete</span></div>
           <div><b>0</b><span>Days lost</span></div>
           <div><b>4 Dec</b><span>Handover</span></div>
+        </div>
+      </section>
+
+      <section class="y-card y-notify span12" id="y-notify" aria-labelledby="y-nt-t">
+        <div class="ph" id="ph" role="group" aria-label="Demo phone: what Priya and Sam receive">
+          <div class="ph-screen">
+            <div class="ph-notch" aria-hidden="true"></div>
+            <div class="ph-chat" aria-live="polite">
+              <div class="ph-head"><span class="av" aria-hidden="true">W</span><div><b>Wandle Build</b><small>Business account · 14 Elms Crescent</small></div></div>
+              <div class="ph-body" id="ph-body">
+                <span class="ph-day">Friday 9 October</span>
+                <div class="ph-b">
+                  <div class="ph-thumbs"><img src="img/p-elms.webp" alt=""><img src="img/s-kitchen.webp" alt=""><span><img src="img/p-northcote.webp" alt=""></span></div>
+                  <strong>Week 18 update from Dan</strong><br>Screed is down and curing, and building control signed off the steel. <strong>0 days lost</strong>, still on track for 4 Dec.<br><br><strong>1 decision needed by Fri 16 Oct:</strong> kitchen splashback tile (10-day lead time).
+                  <em>16:02</em>
+                  <div class="ph-btns"><button type="button" data-ph="tile" class="pulse">Choose tile</button><button type="button" data-ph="update">See full update</button></div>
+                </div>
+              </div>
+              <div class="ph-bar"><button type="button" class="ph-quick" data-ph="reply">Reply: “Could we see the tile samples on site?”</button><div class="ph-input">Message</div></div>
+            </div>
+            <div class="ph-lock">
+              <span class="date">Friday 9 October</span>
+              <span class="time">16:02</span>
+              <button type="button" class="ph-notif" data-ph="open">
+                <span class="app"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3zm4.6 12.6c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.1-2.9-.7-2.4-1-4-3.4-4.1-3.6-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></span>
+                <span><small><span>WhatsApp</span><span>now</span></small><b>Wandle Build</b><span>Week 18 update from Dan: screed's down, 0 days lost. 6 photos · 1 decision needed</span></span>
+              </button>
+              <span class="ph-hint">Tap the notification</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="mono" style="color:var(--oak)">How you'll hear from us</p>
+          <h2 id="y-nt-t" style="margin-top:8px">You never have to log in to keep up.</h2>
+          <p class="y-sub" style="font-size:15.5px;max-width:52ch">Updates come to you on WhatsApp. This portal keeps the full record, and every button opens the right page already signed in. Try it on the phone.</p>
+          <ol class="y-steps" id="y-steps">
+            <li class="y-step on"><span class="n">1</span><div><b>Friday's update arrives</b>A notification from Wandle, like any other message.</div></li>
+            <li class="y-step"><span class="n">2</span><div><b>Read it right there</b>Photos, progress and anything that needs you — no app, no password.</div></li>
+            <li class="y-step"><span class="n">3</span><div><b>Tap to act</b>“Choose tile” opens your decision here, already signed in. Confirm, and the phone pings back.</div></li>
+            <li class="y-step"><span class="n">4</span><div><b>Reply in WhatsApp</b>Your reply lands in Messages for Dan and Laura, so nothing gets lost in a personal phone.</div></li>
+          </ol>
+          <div class="y-notify-acts"><button class="y-btn ghost" type="button" id="ph-restart">Replay from the start</button></div>
         </div>
       </section>
 
@@ -1474,7 +1581,7 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   }));
   yard.querySelector('[data-dec="tile"] .y-dec-act .y-btn').addEventListener('click', e => {
     const box = e.target.closest('.y-dec'), pick = box.querySelector('.y-sw[aria-pressed="true"]');
-    if (!pick) return; finishDec(box, pick.dataset.val + ' confirmed'); toast('Splashback confirmed. Dan will order it today.');
+    if (!pick) return; finishDec(box, pick.dataset.val + ' confirmed'); phTileDone(pick.dataset.val);
   });
   yard.querySelector('[data-confirm]').addEventListener('click', e => { finishDec(e.target.closest('.y-dec'), 'Confirmed as drawn'); toast('Pendant positions confirmed for first fix.'); });
   let extras = 180;
@@ -1488,9 +1595,10 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
     exLeft(); toast('Extra approved and added to your total.');
   }));
   const thread = document.getElementById('y-thread');
-  const addMsg = (text, me) => {
+  const addMsg = (text, me, via) => {
     const d = document.createElement('div'); d.className = 'y-msg ' + (me ? 'me' : 'them');
     const sm = document.createElement('small'); sm.textContent = (me ? 'You' : 'Dan Okafor') + ' · just now';
+    if (via) { const v = document.createElement('span'); v.className = 'via'; v.textContent = 'via WhatsApp'; sm.append(v); }
     d.append(sm, document.createTextNode(text)); thread.append(d); thread.scrollTop = thread.scrollHeight;
   };
   yard.querySelectorAll('[data-discuss]').forEach(b => b.addEventListener('click', () => {
@@ -1502,6 +1610,36 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
     addMsg(v, true); i.value = '';
     setTimeout(() => addMsg('Thanks — I will pick this up on site this afternoon and come back to you.', false), 1400);
   });
+  // phone walkthrough – shows how WhatsApp and the portal work together
+  const ph = document.getElementById('ph'), phBody = document.getElementById('ph-body'), steps = [...document.querySelectorAll('#y-steps .y-step')];
+  const phInitial = phBody.innerHTML;
+  const setStep = n => steps.forEach((li, i) => { li.classList.toggle('on', i === n); li.classList.toggle('done', i < n); });
+  const phSay = (html, me, delay) => setTimeout(() => {
+    const b = document.createElement('div'); b.className = 'ph-b' + (me ? ' me' : '');
+    b.innerHTML = html + '<em>' + (me ? '16:09 ✓✓' : '16:10') + '</em>'; phBody.append(b); phBody.scrollTop = phBody.scrollHeight;
+  }, delay || 0);
+  const goTo = (id, flash) => { const el = document.getElementById(id); el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); if (flash) { el.classList.remove('y-flash'); void el.offsetWidth; el.classList.add('y-flash'); } };
+  let phStage = 0;
+  const phTileDone = val => {
+    toast('Confirmed. Wandle sent a WhatsApp back — scroll up to the phone.');
+    phSay('<strong>Thanks, Priya!</strong> Splashback: <strong>' + val + '</strong> confirmed. Dan is ordering it today, delivery w/c 26 Oct.', false, 500);
+    const t = ph.querySelector('[data-ph="tile"]'); t.disabled = true; t.classList.remove('pulse'); t.textContent = 'Tile chosen ✓';
+    if (phStage < 3) { phStage = 3; setStep(3); }
+  };
+  const phBind = () => ph.querySelectorAll('[data-ph]').forEach(b => b.onclick = () => {
+    const a = b.dataset.ph;
+    if (a === 'open') { ph.classList.add('is-chat'); phStage = 1; setStep(1); }
+    if (a === 'tile') { phStage = Math.max(phStage, 2); setStep(2); b.classList.remove('pulse'); goTo('y-decisions', true); toast('Opened in Wandle Yard, already signed in. Pick a tile and confirm.'); }
+    if (a === 'update') { goTo('y-updates', true); }
+    if (a === 'reply') {
+      b.disabled = true; const q = 'Could we see the tile samples on site?';
+      phSay(q, true); addMsg(q, true, true); setStep(3);
+      setTimeout(() => { const r = 'Of course — I’ve left all three on the kitchen windowsill, labelled on the back.'; addMsg(r, false); phSay('<strong>Dan Okafor:</strong> ' + r, false); toast('Your reply landed in Messages for Dan and Laura.'); steps.forEach(li => { li.classList.remove('on'); li.classList.add('done'); }); }, 1600);
+    }
+  });
+  phBind();
+  document.getElementById('ph-restart').addEventListener('click', () => { ph.classList.remove('is-chat'); phBody.innerHTML = phInitial; ph.querySelector('[data-ph="reply"]').disabled = false; phStage = 0; setStep(0); phBind(); });
+
   // portal nav: in-page jumps + highlight the section in view
   const yLinks = [...yard.querySelectorAll('.y-nav a[href^="#y-"]')];
   yLinks.forEach(a => a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
