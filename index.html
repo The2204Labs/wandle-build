@@ -772,6 +772,89 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
 }
 @media (max-width:560px){.y-site-stats{grid-template-columns:1fr}}
 
+
+/* ---------- Yard: office dashboard (screen 3) ---------- */
+.y-office .y-hero::after{background-image:url(img/p-putney.webp)}
+.of-att{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.of-att li{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--y-line);border-radius:12px}
+.of-att .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--y-warn-bg);color:var(--y-warn)}
+.of-att .ic.bad{background:#F6E3DE;color:#9A3B26}
+.of-att .ic svg{width:18px;height:18px}
+.of-att b{display:block;font-weight:500;font-size:15px}
+.of-att span{font-size:13.5px;color:var(--y-ink2)}
+.of-filters{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}
+.of-filters button{border:1px solid var(--y-line);background:#fff;border-radius:999px;padding:7px 12px;font:500 13px var(--inner);cursor:pointer;color:var(--y-ink2);min-height:34px}
+.of-filters button[aria-pressed="true"]{background:var(--y-ink);color:#fff;border-color:var(--y-ink)}
+.of-tablewrap{overflow-x:auto;margin-top:8px;-webkit-overflow-scrolling:touch}
+.of-table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.of-table th{font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--y-ink2);text-align:left;padding:10px 10px 10px 0;border-bottom:1.5px solid var(--y-ink);white-space:nowrap}
+.of-table td{padding:12px 10px 12px 0;border-bottom:1px solid var(--y-line);vertical-align:middle}
+.of-table tr[hidden]{display:none}
+.of-table td b{font-weight:500;display:block}
+.of-table td small{color:var(--y-ink2);font-size:12.5px}
+.of-prog{display:flex;align-items:center;gap:8px;min-width:130px}
+.of-prog .bar{flex:1;height:6px;border-radius:9px;background:#ECE9E2;overflow:hidden}
+.of-prog .bar i{display:block;height:100%;background:#2C2E2A}
+.of-prog.risk .bar i{background:#B7791F}
+.of-prog span{font:500 11.5px var(--mono);color:var(--y-ink2);white-space:nowrap}
+.of-who{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.of-who i{width:24px;height:24px;border-radius:50%;background:#2C2E2A;color:#fff;display:grid;place-items:center;font:600 10px var(--inner);font-style:normal}
+.of-link{color:var(--y-ink);font-weight:500;font-size:13px;white-space:nowrap}
+.of-kan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.of-col{background:#F4F2EE;border-radius:12px;padding:10px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.of-col header{display:flex;justify-content:space-between;align-items:baseline;padding:2px 4px 4px}
+.of-col header b{font-weight:600;font-size:14px}
+.of-col header span{font:500 11.5px var(--mono);color:var(--y-ink2)}
+.of-card{background:#fff;border:1px solid var(--y-line);border-radius:10px;padding:10px 11px;display:grid;gap:5px;font-size:13.5px}
+.of-card b{font-weight:500;font-size:14.5px}
+.of-card .meta{color:var(--y-ink2);font-size:12.5px}
+.of-card .row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:2px}
+.of-card .src{font:500 10.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:#EFEDE8;color:var(--y-ink2)}
+.of-card .src.web{background:#E8EEF7;color:#2F5A8A}
+.of-card button{border:0;background:none;font:500 12.5px var(--inner);color:var(--oak);cursor:pointer;padding:4px 0;min-height:28px}
+.of-card.new{border-color:var(--oak);box-shadow:0 0 0 3px rgba(122,92,58,.15);animation:bubIn .5s var(--ease) both}
+.of-conv{margin-top:14px;display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--y-ink2)}
+.of-conv b{color:var(--y-ink);font-weight:600}
+.of-cash{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;align-items:end;height:190px;margin-top:22px;padding-bottom:4px;border-bottom:1px solid var(--y-line)}
+.of-cash div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%}
+.of-cash i{display:block;width:100%;max-width:46px;background:#2C2E2A;border-radius:6px 6px 2px 2px;min-height:4px}
+.of-cash div.now i{background:var(--oak)}
+.of-cash span{font:500 11px var(--mono);color:var(--y-ink2);white-space:nowrap}
+.of-cash-x{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;margin-top:8px;text-align:center;font:400 11px var(--mono);color:var(--y-ink2)}
+.of-team{list-style:none;margin:12px 0 0;padding:0}
+.of-team li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--y-line)}
+.of-team li:first-child{border-top:0}
+.of-team .y-av{width:34px;height:34px;font-size:12px;background:#2C2E2A;color:#fff}
+.of-team b{display:block;font-weight:500;font-size:14.5px}
+.of-team li > div span{font-size:13px;color:var(--y-ink2)}
+@media (max-width:1100px){.of-kan{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){
+  .of-kan{grid-template-columns:1fr}
+  .of-att li{grid-template-columns:36px minmax(0,1fr)}
+  .of-att li .y-btn{grid-column:2;justify-self:start}
+  .of-cash{height:150px;gap:4px}.of-cash-x{gap:4px}
+  .of-cash span{font-size:9.5px}
+}
+
+
+/* ---------- screenshot mode (?shot=…) used to make the device showcase images ---------- */
+html.shot .y-demo{display:none}
+html.shot-client #y-notify,html.shot-client .y-nav a[href="#y-notify"]{display:none}
+html.shot-phone body{padding-top:48px;background:#F7F6F2}
+html.shot-site .y-top,html.shot-site .y-site-copy{display:none}
+html.shot-site .y-sitewrap{padding:0;display:block}
+html.shot-site .y-sitewrap .ph.sm{width:100%;max-width:none;height:calc(100vh - 48px);border-radius:0;box-shadow:none;margin:0}
+html.shot-site .y-sitewrap .ph.sm .ph-screen{border:0;border-radius:0}
+html.shot-site .sm-top{padding-top:14px}
+html.shot-wa body{background:#ECE5DD}
+html.shot-wa .y > *:not(.y-shell),html.shot-wa .y-nav,html.shot-wa .y-main > *:not(#y-notify),html.shot-wa .y-notify > div:not(.ph){display:none!important}
+html.shot-wa .y-shell,html.shot-wa .y-main{display:block;padding:0;margin:0;max-width:none}
+html.shot-wa .y-notify{display:block;padding:0;border:0;border-radius:0;background:none}
+html.shot-wa #ph{width:100%;max-width:none;height:calc(100vh - 48px);aspect-ratio:auto;border-radius:0;padding:0;box-shadow:none;background:none}
+html.shot-wa #ph .ph-screen{border-radius:0}
+html.shot-wa #ph .ph-notch{display:none}
+html.shot-wa #ph .ph-head{padding-top:12px}
+
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(159,210,127,.6)}70%,100%{box-shadow:0 0 0 9px rgba(159,210,127,0)}}
@@ -1313,14 +1396,14 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
 </main>
 
 <main class="y" data-view="yard" hidden aria-labelledby="y-title">
-  <div class="y-demo"><span><b>Demo</b> · Wandle Yard client portal · sample project and data · nothing you do here is sent anywhere</span><span>A custom system by <a href="https://2204labs.com" target="_blank" rel="noopener">2204 Labs</a></span></div>
+  <div class="y-demo"><span><b>Demo</b> · Wandle Yard client portal · sample project and data · nothing you do here is sent anywhere</span><span><a href="https://wandle.2204labs.com/showcase.html" target="_blank" rel="noopener">See it on every device →</a> · A custom system by <a href="https://2204labs.com" target="_blank" rel="noopener">2204 Labs</a></span></div>
   <header class="y-top">
     <a class="y-brand" href="#yard" data-route="yard" aria-label="Wandle Yard"><b>Wandle.</b><span>Yard</span></a>
     <div class="y-proj" id="y-proj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg> <b>14 Elms Crescent</b> · Clapham SW4</div>
     <div class="y-roles" role="group" aria-label="View as">
       <button type="button" aria-pressed="true" data-role="client">Client</button>
       <button type="button" aria-pressed="false" data-role="site">Site manager</button>
-      <button disabled title="Coming next: the office dashboard">Office</button>
+      <button type="button" aria-pressed="false" data-role="office">Office</button>
     </div>
     <div class="y-user" id="y-user"><span class="y-av" aria-hidden="true">PS</span><span>Priya &amp; Sam</span></div>
   </header>
@@ -1511,6 +1594,94 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
     </div>
   </div>
 
+
+  <div class="y-shell y-office" id="y-office" hidden>
+    <nav class="y-nav" aria-label="Office">
+      <a href="#of-overview" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg> Overview</a>
+      <a href="#of-attention"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg> Needs attention <span class="n">3</span></a>
+      <a href="#of-jobs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-6h4v6"/></svg> Live jobs</a>
+      <a href="#of-pipeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg> Enquiries <span class="n" id="of-newcount">3</span></a>
+      <a href="#of-cash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 6.5A4 4 0 0 0 9 9v11h8M6 13h7M6 20h12"/></svg> Cash flow</a>
+      <a href="#of-team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 5.5 5"/></svg> Team</a>
+      <a class="y-back" href="#home" data-route="home">← Back to wandle site</a>
+    </nav>
+    <div class="y-main">
+      <section class="y-card y-hero span12" id="of-overview">
+        <div>
+          <p class="mono">Tuesday 13 October · Office</p>
+          <h1>Good morning, Tom.</h1>
+          <p><b style="color:#fff;font-weight:500">9 of 11 jobs on programme.</b> Heathfield lost two days to rain and Abbeville is waiting on the kitchen supplier. One stage payment is overdue.</p>
+        </div>
+        <div class="y-kpis">
+          <div><b>11</b><span>Live jobs</span></div>
+          <div><b>£89k</b><span>Due in 14 days</span></div>
+          <div><b>£14.3k</b><span>Extras this month</span></div>
+          <div><b>23</b><span>Enquiries this month</span></div>
+        </div>
+      </section>
+
+      <section class="y-card span7" id="of-attention" aria-labelledby="of-at-t">
+        <h2 id="of-at-t">Needs attention <span class="pill warn"><i></i>3 today</span></h2>
+        <p class="y-sub">Flagged automatically from site logs, the programme and payments.</p>
+        <ul class="of-att">
+          <li><span class="ic bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 6.5A4 4 0 0 0 9 9v11h8M6 13h7M6 20h12"/></svg></span><div><b>Stage payment overdue · 41 Nightingale Lane</b><span>£22,400 plaster stage, due 7 Oct. Reminder sent once.</span></div><button class="y-btn" type="button" data-chase>Chase on WhatsApp</button></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></span><div><b>2 days lost · 22 Heathfield Gardens</b><span>Rain Thu &amp; Fri. Dan suggests a Saturday to catch up.</span></div><button class="y-btn ghost" type="button" data-toast="Saturday approved. Dan and the client are both notified.">Approve Saturday</button></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-6h4v6"/></svg></span><div><b>Supplier delay · 31 Abbeville Road</b><span>Kitchen units slipped to w/c 26 Oct. Programme risk: 4 days.</span></div><button class="y-btn ghost" type="button" data-toast="Programme updated. The client sees the new date in their portal, with Sophie's note.">Update programme</button></li>
+        </ul>
+      </section>
+
+      <section class="y-card span5" id="of-team" aria-labelledby="of-tm-t">
+        <h2 id="of-tm-t">Team this week</h2>
+        <p class="y-sub">Site managers and where they are tomorrow.</p>
+        <ul class="of-team">
+          <li><span class="y-av" aria-hidden="true">DO</span><div><b>Dan Okafor</b><span>3 jobs · Wed: Elms Cres 08:00 delivery</span></div><span class="pill ok"><i></i>All logged</span></li>
+          <li><span class="y-av" aria-hidden="true">SM</span><div><b>Sophie Marsh</b><span>4 jobs · Wed: Ashlone Rd snagging</span></div><span class="pill warn"><i></i>1 log missing</span></li>
+          <li><span class="y-av" aria-hidden="true">MR</span><div><b>Marcus Reid</b><span>4 jobs · Wed: Ravenna Rd basement pour</span></div><span class="pill ok"><i></i>All logged</span></li>
+          <li><span class="y-av" aria-hidden="true" style="background:var(--oak)">LB</span><div><b>Laura Byrne</b><span>Head of projects · reviewing 2 quotes</span></div><span class="pill mute">Office</span></li>
+        </ul>
+      </section>
+
+      <section class="y-card span12" id="of-jobs" aria-labelledby="of-jb-t">
+        <h2 id="of-jb-t">Live jobs <span class="mono" style="font-size:12px">11 jobs · £2.18m contract value</span></h2>
+        <div class="of-filters" role="group" aria-label="Filter jobs">
+          <button type="button" aria-pressed="true" data-filter="all">All 11</button>
+          <button type="button" aria-pressed="false" data-filter="risk">Needs attention 3</button>
+          <button type="button" aria-pressed="false" data-filter="finishing">Finishing soon 2</button>
+        </div>
+        <div class="of-tablewrap">
+          <table class="of-table">
+            <thead><tr><th>Job</th><th>Type</th><th>Programme</th><th>Status</th><th>Site manager</th><th>Extras</th><th>Margin</th><th>Next payment</th><th></th></tr></thead>
+            <tbody>
+          <tr data-f="all"><td><b>14 Elms Crescent</b><small>Clapham SW4</small></td><td>Rear extension</td><td><div class="of-prog"><div class="bar"><i style="width:73%"></i></div><span>wk 19/26</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>£600</td><td>21%</td><td><b>£37,280</b><small>23 Oct</small></td><td><a class="of-link" href="#yard" data-route="yard">Open as client →</a></td></tr>
+          <tr data-f="all risk"><td><b>22 Heathfield Gdns</b><small>Wandsworth SW18</small></td><td>Mansard loft</td><td><div class="of-prog risk"><div class="bar"><i style="width:38%"></i></div><span>wk 6/16</span></div></td><td><span class="pill warn"><i></i>2 days lost</span></td><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>£0</td><td>18%</td><td><b>£14,100</b><small>30 Oct</small></td><td></td></tr>
+          <tr data-f="all"><td><b>8 Trinity Road</b><small>Tooting SW17</small></td><td>Loft + ensuite</td><td><div class="of-prog"><div class="bar"><i style="width:79%"></i></div><span>wk 11/14</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>£1,240</td><td>23%</td><td><b>£12,900</b><small>16 Oct</small></td><td></td></tr>
+          <tr data-f="all risk"><td><b>31 Abbeville Road</b><small>Clapham SW4</small></td><td>Kitchen extension</td><td><div class="of-prog risk"><div class="bar"><i style="width:50%"></i></div><span>wk 9/18</span></div></td><td><span class="pill warn"><i></i>Supplier delay</span></td><td><span class="of-who"><i>SM</i>Sophie Marsh</span></td><td>£2,350</td><td>17%</td><td><b>£19,800</b><small>6 Nov</small></td><td></td></tr>
+          <tr data-f="all risk finishing"><td><b>41 Nightingale Lane</b><small>Balham SW12</small></td><td>Side return</td><td><div class="of-prog risk"><div class="bar"><i style="width:88%"></i></div><span>wk 14/16</span></div></td><td><span class="pill warn"><i></i>Payment overdue</span></td><td><span class="of-who"><i>SM</i>Sophie Marsh</span></td><td>£880</td><td>22%</td><td><b>£22,400</b><small>Overdue 6 days</small></td><td></td></tr>
+          <tr data-f="all"><td><b>56 Ellerton Road</b><small>Earlsfield SW18</small></td><td>Rear extension</td><td><div class="of-prog"><div class="bar"><i style="width:10%"></i></div><span>wk 2/20</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>SM</i>Sophie Marsh</span></td><td>£0</td><td>21%</td><td><b>£28,000</b><small>3 Nov</small></td><td></td></tr>
+          <tr data-f="all finishing"><td><b>9 Ashlone Road</b><small>Putney SW15</small></td><td>Loft conversion</td><td><div class="of-prog"><div class="bar"><i style="width:100%"></i></div><span>wk 12/12</span></div></td><td><span class="pill mute"><i></i>Snagging</span></td><td><span class="of-who"><i>SM</i>Sophie Marsh</span></td><td>£420</td><td>24%</td><td><b>£9,750</b><small>At handover</small></td><td></td></tr>
+          <tr data-f="all"><td><b>7 Lavender Gardens</b><small>Battersea SW11</small></td><td>Whole-house refurb</td><td><div class="of-prog"><div class="bar"><i style="width:13%"></i></div><span>wk 4/30</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>MR</i>Marcus Reid</span></td><td>£0</td><td>20%</td><td><b>£41,000</b><small>20 Nov</small></td><td></td></tr>
+          <tr data-f="all"><td><b>19 Ravenna Road</b><small>Putney SW15</small></td><td>Basement</td><td><div class="of-prog"><div class="bar"><i style="width:50%"></i></div><span>wk 22/44</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>MR</i>Marcus Reid</span></td><td>£5,600</td><td>19%</td><td><b>£58,000</b><small>27 Oct</small></td><td></td></tr>
+          <tr data-f="all"><td><b>3 Kenilworth Avenue</b><small>Wimbledon SW19</small></td><td>New build</td><td><div class="of-prog"><div class="bar"><i style="width:53%"></i></div><span>wk 31/58</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>MR</i>Marcus Reid</span></td><td>£3,210</td><td>16%</td><td><b>£64,000</b><small>13 Nov</small></td><td></td></tr>
+          <tr data-f="all"><td><b>27 Northcote Road</b><small>Battersea SW11</small></td><td>Kitchen &amp; bath</td><td><div class="of-prog"><div class="bar"><i style="width:38%"></i></div><span>wk 3/8</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>MR</i>Marcus Reid</span></td><td>£0</td><td>25%</td><td><b>£8,200</b><small>30 Oct</small></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="y-card span12" id="of-pipeline" aria-labelledby="of-pp-t">
+        <h2 id="of-pp-t">Enquiries <span class="mono" style="font-size:12px">From the website, referrals and Houzz</span></h2>
+        <p class="y-sub">Every “Book a site survey” form on the website lands here automatically. Try it from the Contact page.</p>
+        <div class="of-kan" id="of-kan"><section class="of-col" data-col="new" aria-label="New enquiry"><header><b>New enquiry</b><span data-count>3</span></header><div class="of-card"><b>Alex Morgan</b><span class="meta">SW12 · Loft conversion</span><span class="meta">£75k – £150k</span><div class="row"><span class="src web">Website</span><span class="meta">2 days ago</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Hannah Lee</b><span class="meta">SW18 · Side return</span><span class="meta">£75k – £150k</span><div class="row"><span class="src">Referral</span><span class="meta">3 days ago</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Owen Price</b><span class="meta">SW15 · Basement</span><span class="meta">£300k – £600k</span><div class="row"><span class="src">Houzz</span><span class="meta">5 days ago</span></div><button type="button" data-next>Move to next stage →</button></div></section><section class="of-col" data-col="survey" aria-label="Survey booked"><header><b>Survey booked</b><span data-count>4</span></header><div class="of-card"><b>Ruth Okoye</b><span class="meta">SW11 · Whole-house refurb</span><span class="meta">£150k – £300k</span><div class="row"><span class="src web">Website</span><span class="meta">Thu 15 Oct, 10:00</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Jon Ellis</b><span class="meta">SW4 · Rear extension</span><span class="meta">£75k – £150k</span><div class="row"><span class="src">Referral</span><span class="meta">Fri 16 Oct, 14:00</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Mei Chen</b><span class="meta">SW19 · Loft + ensuite</span><span class="meta">£75k – £150k</span><div class="row"><span class="src">Google</span><span class="meta">Mon 19 Oct, 09:30</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Sara Patel</b><span class="meta">SW17 · Kitchen extension</span><span class="meta">£75k – £150k</span><div class="row"><span class="src web">Website</span><span class="meta">Tue 20 Oct, 11:00</span></div><button type="button" data-next>Move to next stage →</button></div></section><section class="of-col" data-col="quote" aria-label="Quote sent"><header><b>Quote sent</b><span data-count>3</span></header><div class="of-card"><b>Daniel Ross</b><span class="meta">SW18 · Rear extension</span><span class="meta">£128,400 quoted</span><div class="row"><span class="src">Referral</span><span class="meta">Sent 6 days ago</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>The Wrights</b><span class="meta">SW15 · New build</span><span class="meta">£612,000 quoted</span><div class="row"><span class="src">Houzz</span><span class="meta">Sent 9 days ago</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Amira Haddad</b><span class="meta">SW12 · Side return</span><span class="meta">£96,500 quoted</span><div class="row"><span class="src web">Website</span><span class="meta">Sent 2 days ago</span></div><button type="button" data-next>Move to next stage →</button></div></section><section class="of-col" data-col="won" aria-label="Won this month"><header><b>Won this month</b><span data-count>2</span></header><div class="of-card"><b>Ben Carter</b><span class="meta">SW4 · Mansard loft</span><span class="meta">£142,000 signed</span><div class="row"><span class="src">Referral</span><span class="meta">Starts 2 Nov</span></div><button type="button" data-next>Move to next stage →</button></div><div class="of-card"><b>Lucy Tran</b><span class="meta">SW11 · Kitchen &amp; bath</span><span class="meta">£68,300 signed</span><div class="row"><span class="src web">Website</span><span class="meta">Starts 16 Nov</span></div><button type="button" data-next>Move to next stage →</button></div></section></div>
+        <div class="of-conv"><span><b>31%</b> of surveys become jobs</span><span><b>1.6 days</b> average time to call back</span><span><b>£1.04m</b> in quotes out</span></div>
+      </section>
+
+      <section class="y-card span12" id="of-cash" aria-labelledby="of-cs-t">
+        <h2 id="of-cs-t">Cash flow · stage payments due <span class="mono" style="font-size:12px">Next 8 weeks · £464k</span></h2>
+        <div class="of-cash" role="img" aria-label="Stage payments due per week over the next 8 weeks, from 29 to 95 thousand pounds; week of 26 October is the highest at 95 thousand."><div class="now"><span>£52k</span><i style="height:52%"></i></div><div><span>£37k</span><i style="height:37%"></i></div><div><span>£95k</span><i style="height:95%"></i></div><div><span>£41k</span><i style="height:41%"></i></div><div><span>£64k</span><i style="height:64%"></i></div><div><span>£88k</span><i style="height:88%"></i></div><div><span>£29k</span><i style="height:29%"></i></div><div><span>£58k</span><i style="height:58%"></i></div></div>
+        <div class="of-cash-x" aria-hidden="true"><span>12 Oct</span><span>19 Oct</span><span>26 Oct</span><span>2 Nov</span><span>9 Nov</span><span>16 Nov</span><span>23 Nov</span><span>30 Nov</span></div>
+      </section>
+    </div>
+  </div>
   <div class="y-sitewrap" id="y-site" hidden>
     <div class="ph sm" role="group" aria-label="Demo: Dan's site app">
       <div class="ph-screen">
@@ -1730,7 +1901,8 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
     if (bad.length) { document.getElementById(bad[0]).focus(); return; }
     const name = document.getElementById('f-name').value.trim().split(' ')[0];
     const pc = document.getElementById('f-pc').value.trim().toUpperCase();
-    form.innerHTML = `<div class="done" role="status"><b>Thanks, ${name.replace(/[<>&"]/g,'')}.</b><p>Your request for a site survey in ${pc.replace(/[<>&"]/g,'')} is logged. A project lead will call within two working days.</p><p class="mono" style="margin-top:8px">Demo site — no message was sent.</p></div>`;
+    window.addWebEnquiry && window.addWebEnquiry({ name: document.getElementById('f-name').value.trim(), pc: pc, type: document.getElementById('f-type').value, budget: document.getElementById('f-budget').value });
+    form.innerHTML = `<div class="done" role="status"><b>Thanks, ${name.replace(/[<>&"]/g,'')}.</b><p>Your request for a site survey in ${pc.replace(/[<>&"]/g,'')} is logged. A project lead will call within two working days.</p><p class="mono" style="margin-top:8px">Demo site — no message was sent.</p><p style="margin-top:14px"><a class="btn light" href="#yard-office" data-route="yard-office">See it arrive in Wandle Yard →</a></p></div>`;
   });
 
   // case studies – one template, filled from the project list
@@ -1848,13 +2020,21 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   const ySite = document.getElementById('y-site'), yClient = document.getElementById('y-client');
   const yProj = document.getElementById('y-proj'), yUser = document.getElementById('y-user');
   const projClient = yProj.innerHTML, userClient = yUser.innerHTML;
+  const yOffice = document.getElementById('y-office');
+  const ROLES = {
+    client: { proj: null, user: null, title: 'Wandle Yard · 14 Elms Crescent', hash: '#yard' },
+    site: { proj: '<b>3 live jobs</b> · Wandsworth &amp; Lambeth', user: '<span class="y-av" aria-hidden="true" style="background:#2C2E2A">DO</span><span>Dan Okafor</span>', title: 'Wandle Yard · Site · Dan Okafor', hash: '#yard-site' },
+    office: { proj: '<b>Wandle Build</b> · 11 live jobs', user: '<span class="y-av" aria-hidden="true" style="background:#2C2E2A">TH</span><span>Tom Hale</span>', title: 'Wandle Yard · Office', hash: '#yard-office' }
+  };
+  let yRole = 'client';
   const setRole = (r, fromRoute) => {
+    yRole = r;
     yard.querySelectorAll('[data-role]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.role === r)));
-    yClient.hidden = r !== 'client'; ySite.hidden = r !== 'site';
-    yProj.innerHTML = r === 'site' ? '<b>3 live jobs</b> · Wandsworth &amp; Lambeth' : projClient;
-    yUser.innerHTML = r === 'site' ? '<span class="y-av" aria-hidden="true" style="background:#2C2E2A">DO</span><span>Dan Okafor</span>' : userClient;
-    document.title = r === 'site' ? 'Wandle Yard · Site · Dan Okafor' : 'Wandle Yard · 14 Elms Crescent';
-    if (!fromRoute) { history.replaceState(null, '', r === 'site' ? '#yard-site' : '#yard'); window.scrollTo(0, 0); }
+    yClient.hidden = r !== 'client'; ySite.hidden = r !== 'site'; yOffice.hidden = r !== 'office';
+    yProj.innerHTML = ROLES[r].proj || projClient;
+    yUser.innerHTML = ROLES[r].user || userClient;
+    document.title = ROLES[r].title;
+    if (!fromRoute) { history.replaceState(null, '', ROLES[r].hash); window.scrollTo(0, 0); }
   };
   yard.querySelectorAll('[data-role]').forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
 
@@ -1907,8 +2087,45 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
     setTimeout(() => goTo('y-notify', true), 60); toast('This is what Priya & Sam received. Tap the notification.');
   });
 
+  // office dashboard (screen 3)
+  yOffice.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
+    yOffice.querySelectorAll('[data-filter]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    yOffice.querySelectorAll('.of-table tbody tr').forEach(tr => { tr.hidden = !tr.dataset.f.split(' ').includes(b.dataset.filter); });
+  }));
+  yOffice.querySelectorAll('[data-toast]').forEach(b => b.addEventListener('click', () => { toast(b.dataset.toast); b.disabled = true; }));
+  yOffice.querySelector('[data-chase]').addEventListener('click', e => { toast('Reminder sent on WhatsApp with a one-tap “Pay now” link.'); e.currentTarget.disabled = true; e.currentTarget.textContent = 'Reminder sent'; });
+  const ofCols = ['new', 'survey', 'quote', 'won'];
+  const ofLabels = { survey: 'Survey booked', quote: 'Quote sent', won: 'Won' };
+  const ofCount = () => { yOffice.querySelectorAll('.of-col').forEach(c => c.querySelector('[data-count]').textContent = c.querySelectorAll('.of-card').length); document.getElementById('of-newcount').textContent = yOffice.querySelectorAll('[data-col="new"] .of-card').length; };
+  yOffice.querySelector('#of-kan').addEventListener('click', e => {
+    const b = e.target.closest('[data-next]'); if (!b) return;
+    const card = b.closest('.of-card'), col = card.closest('.of-col').dataset.col, nxt = ofCols[ofCols.indexOf(col) + 1];
+    if (!nxt) return;
+    const dest = yOffice.querySelector('[data-col="' + nxt + '"]'); dest.insertBefore(card, dest.querySelector('.of-card'));
+    card.classList.remove('new'); void card.offsetWidth; card.classList.add('new');
+    if (nxt === 'won') b.remove();
+    ofCount(); toast('Moved to “' + ofLabels[nxt] + '”. The client gets the next step on WhatsApp.');
+  });
+  window.addWebEnquiry = q => {
+    const esc = t => String(t).replace(/[<>&"]/g, '');
+    const c = document.createElement('div'); c.className = 'of-card new';
+    c.innerHTML = '<b>' + esc(q.name) + '</b><span class="meta">' + esc(q.pc.split(' ')[0]) + ' · ' + esc(q.type) + '</span><span class="meta">' + esc(q.budget) + '</span><div class="row"><span class="src web">Website</span><span class="meta">Just now</span></div><button type="button" data-next>Move to next stage →</button>';
+    const col = yOffice.querySelector('[data-col="new"]'); col.insertBefore(c, col.querySelector('.of-card')); ofCount();
+  };
+
+  // screenshot mode for the device showcase: ?shot=client|wa|site|office[&tab=…][&device=phone]
+  (() => {
+    const q = new URLSearchParams(location.search), shot = q.get('shot');
+    if (!shot) return;
+    document.documentElement.classList.add('shot', 'shot-' + shot);
+    if (q.get('device') === 'phone') document.documentElement.classList.add('shot-phone');
+    if (shot === 'wa') { ph.classList.add('is-chat'); phSay('<span class="ph-from">Dan Okafor · Site manager</span><strong>Thanks, Priya!</strong> Splashback: <strong>Handmade, chalk</strong> confirmed. Dan is ordering it today, delivery w/c 26 Oct.', false); }
+    if (q.get('tab')) smGo(q.get('tab'));
+    setTimeout(() => yard.querySelectorAll('.y-nav').forEach(n => n.querySelectorAll('a').forEach((x, i) => x.classList.toggle('on', i === 0))), 800);
+  })();
+
   // portal nav: in-page jumps + highlight the section in view
-  const yLinks = [...yard.querySelectorAll('.y-nav a[href^="#y-"]')];
+  const yLinks = [...yard.querySelectorAll('.y-nav a[href^="#y-"], .y-nav a[href^="#of-"]')];
   yLinks.forEach(a => a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) yLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id)); }), { rootMargin: '-35% 0px -60% 0px' });
@@ -1920,14 +2137,14 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   const route = () => {
     let name = location.hash.slice(1);
     if (name.indexOf('case-') === 0) name = renderCase(name.slice(5)) ? 'case' : 'projects';
-    if (name === 'yard' || name === 'yard-site') { setRole(name === 'yard-site' ? 'site' : 'client', true); name = 'yard'; }
+    if (name === 'yard' || name === 'yard-site' || name === 'yard-office') { setRole(name === 'yard-site' ? 'site' : name === 'yard-office' ? 'office' : 'client', true); name = 'yard'; }
     const v = views.some(x => x.dataset.view === name) ? name : 'home';
     views.forEach(x => { x.hidden = x.dataset.view !== v; });
     document.body.className = 'v-' + v;
     drop.querySelectorAll('a').forEach(a => a.dataset.route === (v === 'case' ? 'projects' : v) ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
     setMenu(false);
     setPaused(v !== 'home' || document.hidden || userPaused);
-    if (v === 'yard') document.title = ySite.hidden ? 'Wandle Yard · 14 Elms Crescent' : 'Wandle Yard · Site · Dan Okafor';
+    if (v === 'yard') document.title = ROLES[yRole].title;
     else if (v !== 'case') document.title = 'Wandle Build · a 2204 Labs concept';
     window.scrollTo(0, 0);
   };
