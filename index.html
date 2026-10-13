@@ -671,6 +671,107 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   .y-notify > div{width:100%}
 }
 
+
+/* ---------- Yard: site manager view (screen 2) ---------- */
+.y-sitewrap{max-width:1480px;margin-inline:auto;padding:28px var(--gutter) 64px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.y-sitewrap .ph.sm{width:340px;aspect-ratio:340/700;position:sticky;top:20px}
+.y-site-copy .mono{color:var(--oak)}
+.y-site-copy h2{margin:10px 0 14px;font-size:clamp(30px,3.4vw,52px);font-weight:600;letter-spacing:-.05em;line-height:1}
+.y-site-copy > p{color:var(--y-ink2);font-size:17px;max-width:52ch}
+.y-site-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0}
+.y-site-stats div{background:#fff;border:1px solid var(--y-line);border-radius:14px;padding:16px}
+.y-site-stats b{display:block;font-size:clamp(22px,2vw,30px);font-weight:600;letter-spacing:-.05em;line-height:1}
+.y-site-stats span{display:block;margin-top:6px;font-size:13.5px;color:var(--y-ink2)}
+.sm-app{position:absolute;inset:0;display:flex;flex-direction:column;background:#F4F2EE;font-family:var(--inner);color:#131412}
+.sm-top{padding:44px 16px 12px;background:#131412;color:#F2F1EC;display:flex;justify-content:space-between;align-items:end}
+.sm-top small{display:block;font:500 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#A4A69E}
+.sm-top b{font-size:20px;font-weight:600;letter-spacing:-.04em}
+.sm-top .y-av{width:32px;height:32px;font-size:12px;background:#2C2E2A}
+.sm-main{flex:1;overflow-y:auto;padding:14px 12px 16px;scroll-behavior:smooth}
+.sm-panel{display:grid;gap:10px;align-content:start}
+.sm-h{font:500 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#6B6D66;margin:6px 2px 0}
+.sm-card{background:#fff;border-radius:14px;padding:12px;border:1px solid #E6E3DC}
+.sm-cta{width:100%;border:0;background:var(--oak);color:#fff;border-radius:14px;padding:14px;text-align:left;cursor:pointer;font:inherit;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px}
+.sm-cta b{display:block;font-size:16px;font-weight:600;letter-spacing:-.02em}
+.sm-cta span{font-size:12.5px;opacity:.85}
+.sm-cta svg{width:22px;height:22px}
+.sm-alert{width:100%;border:1px solid #E6E3DC;background:#fff;border-radius:12px;padding:10px 11px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;text-align:left;font:inherit;color:inherit;cursor:pointer;align-items:start}
+.sm-alert i{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#EFEDE8}
+.sm-alert i svg{width:16px;height:16px}
+.sm-alert b{display:block;font-size:13.5px;font-weight:600}
+.sm-alert span{font-size:12.5px;color:#5B5E57;line-height:1.35;display:block}
+.sm-alert.new{border-color:#D9C9B3;background:#FBF7F1}
+.sm-alert.new i{background:var(--oak);color:#fff}
+.sm-job{display:grid;gap:8px}
+.sm-job header{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sm-job b{font-size:14.5px;font-weight:600}
+.sm-job small{font-size:12px;color:#5B5E57}
+.sm-bar{height:6px;border-radius:9px;background:#ECE9E2;overflow:hidden}
+.sm-bar i{display:block;height:100%;background:#2C2E2A;border-radius:9px}
+.sm-job.risk .sm-bar i{background:#B7791F}
+.sm-pill{font:500 10px var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:3px 7px;border-radius:999px;background:var(--y-ok-bg);color:var(--y-ok);white-space:nowrap}
+.sm-pill.warn{background:var(--y-warn-bg);color:var(--y-warn)}
+.sm-thread{display:flex;flex-direction:column;gap:7px}
+.sm-msg{max-width:86%;background:#EFEDE8;border-radius:12px;padding:8px 10px;font-size:13px;line-height:1.4}
+.sm-msg small{display:block;font:500 9.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:#6B6D66;margin-bottom:2px}
+.sm-msg.me{align-self:flex-end;background:#131412;color:#fff}
+.sm-msg.me small{color:#A4A69E}
+.sm-msg .via{background:#E5F0E6;color:#3E7B4F;padding:0 5px;border-radius:3px;margin-left:4px}
+.sm-msg.me .via{background:rgba(255,255,255,.14);color:#CFE6D5}
+.sm-quick{display:flex;gap:6px;flex-wrap:wrap}
+.sm-chip{border:1px solid #DAD6CE;background:#fff;border-radius:999px;padding:6px 10px;font:500 12.5px var(--inner);color:#131412;cursor:pointer}
+.sm-chip[aria-pressed="true"]{background:#131412;color:#fff;border-color:#131412}
+.sm-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.sm-ph{position:relative;aspect-ratio:1;border-radius:9px;overflow:hidden;border:0;padding:0;cursor:pointer;background:#ddd}
+.sm-ph img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}
+.sm-ph::after{content:"";position:absolute;top:5px;right:5px;width:18px;height:18px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.25)}
+.sm-ph[aria-pressed="true"]::after{background:var(--oak) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M5 12l4 4 10-10'/%3E%3C/svg%3E") center/11px no-repeat}
+.sm-ph[aria-pressed="false"] img{opacity:.55}
+.sm-ph.add{display:grid;place-items:center;background:#EFEDE8;color:#6B6D66;font-size:22px}
+.sm-ph.add::after{display:none}
+.sm-voice{width:100%;border:0;border-radius:12px;background:#131412;color:#fff;padding:12px;display:flex;align-items:center;gap:10px;font:500 14px var(--inner);cursor:pointer}
+.sm-voice svg{width:20px;height:20px}
+.sm-voice.rec{background:#A3412C}
+.sm-wave{display:flex;gap:2px;align-items:center;height:18px;margin-left:auto}
+.sm-wave i{width:3px;border-radius:2px;background:currentColor;height:30%;opacity:.8}
+.sm-voice.rec .sm-wave i{animation:wave 0.9s ease-in-out infinite}
+.sm-wave i:nth-child(2){animation-delay:.1s}.sm-wave i:nth-child(3){animation-delay:.2s}.sm-wave i:nth-child(4){animation-delay:.3s}.sm-wave i:nth-child(5){animation-delay:.4s}.sm-wave i:nth-child(6){animation-delay:.5s}
+@keyframes wave{0%,100%{height:25%}50%{height:100%}}
+.sm-text{width:100%;min-height:92px;border:1px solid #DAD6CE;border-radius:10px;padding:9px;font:400 13px/1.45 var(--inner);color:#131412;background:#fff;resize:vertical}
+.sm-text:focus{outline:2px solid var(--oak);outline-offset:1px}
+.sm-row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.sm-row > span{font-size:12.5px;color:#5B5E57}
+.sm-btn{width:100%;border:0;border-radius:12px;background:#131412;color:#fff;padding:13px;font:600 14.5px var(--inner);cursor:pointer;display:flex;justify-content:center;align-items:center;gap:8px}
+.sm-btn svg{width:16px;height:16px}
+.sm-btn.oak{background:var(--oak)}
+.sm-btn.ghost{background:#fff;color:#131412;border:1px solid #DAD6CE}
+.sm-btn:disabled{opacity:.4;cursor:not-allowed}
+.sm-done{display:flex;align-items:center;gap:8px;color:var(--y-ok);font-weight:600;font-size:13.5px}
+.sm-done svg{width:16px;height:16px}
+.sm-days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+.sm-days span{text-align:center;font:500 10.5px var(--mono);padding:6px 0;border-radius:7px;background:#E5F0E6;color:#3E7B4F}
+.sm-days span.todo{background:#EFEDE8;color:#8A8C85}
+.sm-draft{font-size:13px;line-height:1.5}
+.sm-draft p{margin-bottom:8px}
+.sm-draft .sm-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:8px 0}
+.sm-draft .sm-thumbs img{aspect-ratio:1;object-fit:cover;border-radius:6px;width:100%}
+.sm-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border-top:1px solid #E6E3DC;padding:6px 6px 14px}
+.sm-tabs button{border:0;background:none;display:grid;justify-items:center;gap:3px;padding:6px 0;font:500 10.5px var(--inner);color:#8A8C85;cursor:pointer;position:relative}
+.sm-tabs button svg{width:21px;height:21px}
+.sm-tabs button[aria-selected="true"]{color:#131412}
+.sm-tabs .badge{position:absolute;top:2px;left:calc(50% + 6px);min-width:16px;height:16px;border-radius:9px;background:#A3412C;color:#fff;font:600 10px var(--inner);display:grid;place-items:center;padding:0 4px}
+.ph-from{display:block;font-weight:600;font-size:12px;color:#7A5C3A;margin-bottom:2px}
+@media (max-width:900px){
+  .y-sitewrap{grid-template-columns:1fr;padding-top:18px}
+  .y-sitewrap .ph.sm{position:relative;top:0;width:100%;max-width:420px;margin-inline:auto;aspect-ratio:auto;height:680px;border-radius:24px;padding:0;background:none;box-shadow:0 10px 30px -12px rgba(0,0,0,.25)}
+  .y-sitewrap .ph.sm .ph-screen{border-radius:22px;border:1px solid var(--y-line)}
+  .y-sitewrap .ph.sm .ph-notch{display:none}
+  .y-sitewrap .sm-top{padding-top:16px}
+  .y-site-copy{order:-1}
+  .y-site-stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
+}
+@media (max-width:560px){.y-site-stats{grid-template-columns:1fr}}
+
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(159,210,127,.6)}70%,100%{box-shadow:0 0 0 9px rgba(159,210,127,0)}}
@@ -1215,15 +1316,15 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   <div class="y-demo"><span><b>Demo</b> · Wandle Yard client portal · sample project and data · nothing you do here is sent anywhere</span><span>A custom system by <a href="https://2204labs.com" target="_blank" rel="noopener">2204 Labs</a></span></div>
   <header class="y-top">
     <a class="y-brand" href="#yard" data-route="yard" aria-label="Wandle Yard"><b>Wandle.</b><span>Yard</span></a>
-    <div class="y-proj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg> <b>14 Elms Crescent</b> · Clapham SW4</div>
+    <div class="y-proj" id="y-proj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg> <b>14 Elms Crescent</b> · Clapham SW4</div>
     <div class="y-roles" role="group" aria-label="View as">
-      <button aria-pressed="true">Client</button>
-      <button disabled title="Coming next: the site manager's phone app">Site manager</button>
+      <button type="button" aria-pressed="true" data-role="client">Client</button>
+      <button type="button" aria-pressed="false" data-role="site">Site manager</button>
       <button disabled title="Coming next: the office dashboard">Office</button>
     </div>
-    <div class="y-user"><span class="y-av" aria-hidden="true">PS</span><span>Priya &amp; Sam</span></div>
+    <div class="y-user" id="y-user"><span class="y-av" aria-hidden="true">PS</span><span>Priya &amp; Sam</span></div>
   </header>
-  <div class="y-shell">
+  <div class="y-shell" id="y-client">
     <nav class="y-nav" aria-label="Portal">
       <a href="#y-overview" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg> Overview</a>
       <a href="#y-notify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg> On your phone</a>
@@ -1262,7 +1363,7 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
                 <span class="ph-day">Friday 9 October</span>
                 <div class="ph-b">
                   <div class="ph-thumbs"><img src="img/p-elms.webp" alt=""><img src="img/s-kitchen.webp" alt=""><span><img src="img/p-northcote.webp" alt=""></span></div>
-                  <strong>Week 18 update from Dan</strong><br>Screed is down and curing, and building control signed off the steel. <strong>0 days lost</strong>, still on track for 4 Dec.<br><br><strong>1 decision needed by Fri 16 Oct:</strong> kitchen splashback tile (10-day lead time).
+                  <span class="ph-from">Dan Okafor · Site manager</span><strong>Week 18 update</strong><br>Screed is down and curing, and building control signed off the steel. <strong>0 days lost</strong>, still on track for 4 Dec.<br><br><strong>1 decision needed by Fri 16 Oct:</strong> kitchen splashback tile (10-day lead time).
                   <em>16:02</em>
                   <div class="ph-btns"><button type="button" data-ph="tile" class="pulse">Choose tile</button><button type="button" data-ph="update">See full update</button></div>
                 </div>
@@ -1407,6 +1508,109 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
         </div>
       </section>
 
+    </div>
+  </div>
+
+  <div class="y-sitewrap" id="y-site" hidden>
+    <div class="ph sm" role="group" aria-label="Demo: Dan's site app">
+      <div class="ph-screen">
+        <div class="ph-notch" aria-hidden="true"></div>
+        <div class="sm-app" id="sm-app">
+          <div class="sm-top"><div><small>Yard · Site</small><b id="sm-title">Afternoon, Dan</b></div><span class="y-av" aria-hidden="true">DO</span></div>
+          <div class="sm-main" id="sm-main">
+
+            <section class="sm-panel" data-sm="today">
+              <button type="button" class="sm-cta" data-go="log"><div><b>Log today · 14 Elms Crescent</b><span>Photos and a voice note. About 2 minutes.</span></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button>
+              <p class="sm-h">Needs you · Fri 9 Oct</p>
+              <button type="button" class="sm-alert new" data-go="inbox"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></i><div><b>New message · Priya &amp; Sam</b><span>“Will the glazing still be on time if it rains next week?” · 14 Elms Crescent</span></div></button>
+              <button type="button" class="sm-alert" data-go="inbox"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></i><div><b>Decision due · splashback</b><span>Goes out in today’s update. Client to choose by Fri 16 Oct.</span></div></button>
+              <button type="button" class="sm-alert" data-go="jobs"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg></i><div><b>Delivery Tue 08:00</b><span>Sliding door frame · 14 Elms Crescent · gate unlocked</span></div></button>
+              <p class="sm-h">Friday update</p>
+              <button type="button" class="sm-alert" data-go="update"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></i><div><b>Draft ready from this week’s logs</b><span>Mon–Thu logged · add today, then review and send</span></div></button>
+            </section>
+
+            <section class="sm-panel" data-sm="jobs" hidden>
+              <p class="sm-h">Your live jobs · 3</p>
+              <div class="sm-card sm-job"><header><b>14 Elms Crescent</b><span class="sm-pill">On track</span></header><div class="sm-bar"><i style="width:73%"></i></div><small>Rear extension · week 19 of 26 · Clapham SW4</small></div>
+              <div class="sm-card sm-job risk"><header><b>22 Heathfield Gdns</b><span class="sm-pill warn">2 days lost</span></header><div class="sm-bar"><i style="width:38%"></i></div><small>Mansard loft · week 6 of 16 · rain on Thu &amp; Fri</small></div>
+              <div class="sm-card sm-job"><header><b>8 Trinity Road</b><span class="sm-pill">On track</span></header><div class="sm-bar"><i style="width:79%"></i></div><small>Loft + ensuite · week 11 of 14 · Tooting SW17</small></div>
+              <p class="sm-h">Tomorrow</p>
+              <div class="sm-card" style="font-size:13px;line-height:1.5">08:00 Elms Cres · door frame delivery<br>11:00 Heathfield · scaffold inspection<br>14:30 Trinity Rd · tiler starts ensuite</div>
+            </section>
+
+            <section class="sm-panel" data-sm="inbox" hidden>
+              <p class="sm-h">14 Elms Crescent · Priya &amp; Sam</p>
+              <div class="sm-thread" id="sm-thread">
+                <div class="sm-msg"><small>Laura Byrne · Thu</small>Steel signed off by building control. Next inspection: pre-plaster, glazing wall.</div>
+                <div class="sm-msg"><small>Priya · Fri 14:12 <span class="via">via WhatsApp</span></small>Will the glazing still be on time if it rains next week?</div>
+              </div>
+              <div class="sm-quick" id="sm-quick">
+                <button type="button" class="sm-chip" data-reply="Yes. Glazing is booked for w/c 19 Oct and rain doesn’t affect it, the opening is already covered.">Glazing not affected</button>
+                <button type="button" class="sm-chip" data-reply="Good question. I’ll call you at 5 to talk it through.">I’ll call you at 5</button>
+              </div>
+              <p class="sm-h" style="margin-top:4px">Replies reach the client on WhatsApp as “Dan Okafor · Site manager”.</p>
+            </section>
+
+            <section class="sm-panel" data-sm="log" hidden>
+              <p class="sm-h">Daily log · Fri 9 Oct · 14 Elms Crescent</p>
+              <div class="sm-card"><div class="sm-row" style="margin-bottom:8px"><b style="font-size:13.5px">Photos</b><span id="sm-pcount">3 selected</span></div><div class="sm-photos" id="sm-photos"><button type="button" class="sm-ph" aria-pressed="true" aria-label="Photo 1"><img src="img/p-elms.webp" alt="" loading="lazy"></button><button type="button" class="sm-ph" aria-pressed="true" aria-label="Photo 2"><img src="img/s-kitchen.webp" alt="" loading="lazy"></button><button type="button" class="sm-ph" aria-pressed="true" aria-label="Photo 3"><img src="img/p-northcote.webp" alt="" loading="lazy"></button><button type="button" class="sm-ph" aria-pressed="false" aria-label="Photo 4"><img src="img/p-living.webp" alt="" loading="lazy"></button><button type="button" class="sm-ph" aria-pressed="false" aria-label="Photo 5"><img src="img/p-loft.webp" alt="" loading="lazy"></button><button type="button" class="sm-ph add" aria-label="Add photo">+</button></div></div>
+              <button type="button" class="sm-voice" id="sm-voice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span id="sm-vlabel">Record a voice note</span><span class="sm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></button>
+              <label class="sm-h" for="sm-text">What happened today</label>
+              <textarea class="sm-text" id="sm-text" placeholder="Tap record and just talk. Yard writes it up."></textarea>
+              <div class="sm-card" style="display:grid;gap:9px">
+                <div class="sm-row"><span>Weather</span><div class="sm-quick" data-group><button type="button" class="sm-chip" aria-pressed="true">Dry</button><button type="button" class="sm-chip" aria-pressed="false">Rain</button></div></div>
+                <div class="sm-row"><span>Days lost</span><div class="sm-quick" data-group><button type="button" class="sm-chip" aria-pressed="true">0</button><button type="button" class="sm-chip" aria-pressed="false">½</button><button type="button" class="sm-chip" aria-pressed="false">1</button></div></div>
+              </div>
+              <button type="button" class="sm-btn oak" id="sm-save" disabled>Save today's log</button>
+              <div id="sm-saved" hidden class="sm-card" style="display:grid;gap:10px">
+                <span class="sm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg> Logged in 1 min 52 s · 3 photos filed to 14 Elms Crescent</span>
+                <button type="button" class="sm-btn" data-go="update">Preview Friday's update <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+              </div>
+            </section>
+
+            <section class="sm-panel" data-sm="update" hidden>
+              <p class="sm-h">Friday update · week 18 · draft</p>
+              <div class="sm-card"><div class="sm-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span class="todo" id="sm-fri">Fri</span></div><p style="font-size:12px;color:#5B5E57;margin-top:7px" id="sm-built">Built from 4 daily logs, 34 photos and this week's client decisions.</p></div>
+              <div class="sm-card sm-draft">
+                <span class="ph-from">Dan Okafor · Site manager</span>
+                <div class="sm-thumbs"><img src="img/p-elms.webp" alt=""><img src="img/s-kitchen.webp" alt=""><img src="img/p-northcote.webp" alt=""><img src="img/p-living.webp" alt=""></div>
+                <p><b>Week 18:</b> screed is down and curing, and building control signed off the steel. <b>0 days lost</b>, still on track for 4 Dec.</p>
+                <p><b>Next week:</b> sliding door frame arrives Tuesday, glazing w/c 19 Oct.</p>
+                <p><b>1 decision needed by Fri 16 Oct:</b> kitchen splashback tile (10-day lead time). [Choose tile]</p>
+              </div>
+              <button type="button" class="sm-btn oak" id="sm-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l16-8-6 16-2-7z"/></svg> Send to Priya &amp; Sam</button>
+              <button type="button" class="sm-btn ghost" id="sm-edit">Edit before sending</button>
+              <div id="sm-sent" hidden class="sm-card" style="display:grid;gap:10px">
+                <span class="sm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg> Sent 16:02 · WhatsApp to Priya &amp; Sam, copy in their portal</span>
+                <button type="button" class="sm-btn" id="sm-asclient">See it as the client <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+              </div>
+            </section>
+
+          </div>
+          <nav class="sm-tabs" role="tablist" aria-label="Site app">
+            <button type="button" role="tab" aria-selected="true" data-go="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Today</button>
+            <button type="button" role="tab" aria-selected="false" data-go="jobs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-6h4v6"/></svg>Jobs</button>
+            <button type="button" role="tab" aria-selected="false" data-go="inbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Inbox<span class="badge" id="sm-badge">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-go="log"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Log</button>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="y-site-copy">
+      <p class="mono">Site manager view · Dan Okafor</p>
+      <h2>Friday's write-up, from two hours to ten minutes.</h2>
+      <p>Site managers won't fill in forms at 7pm. So Dan logs each day in about two minutes — a few photos and a voice note — and Yard does the rest: it files everything to the right job, answers sit in one shared inbox, and the client's Friday update drafts itself.</p>
+      <div class="y-site-stats">
+        <div><b>2 hrs → 10 min</b><span>Weekly client update, per job</span></div>
+        <div><b>38</b><span>Photos filed to the right job this week, automatically</span></div>
+        <div><b>3 jobs · 1 inbox</b><span>Client messages from WhatsApp and the portal together</span></div>
+      </div>
+      <ol class="y-steps" id="sm-steps">
+        <li class="y-step on"><span class="n">1</span><div><b>Friday afternoon</b>Today shows what needs Dan: a client message, a decision to send out, Tuesday’s delivery.</div></li>
+        <li class="y-step"><span class="n">2</span><div><b>Reply in the inbox</b>Tap a quick reply. Priya gets it on WhatsApp as “Dan Okafor · Site manager”.</div></li>
+        <li class="y-step"><span class="n">3</span><div><b>Log the day</b>Pick photos, record a voice note, save. About two minutes.</div></li>
+        <li class="y-step"><span class="n">4</span><div><b>Friday: check and send</b>The week's logs become the client update. One tap sends it.</div></li>
+      </ol>
     </div>
   </div>
   <div class="y-toast" id="y-toast" role="status" aria-live="polite"></div>
@@ -1622,7 +1826,7 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   let phStage = 0;
   const phTileDone = val => {
     toast('Confirmed. Wandle sent a WhatsApp back — scroll up to the phone.');
-    phSay('<strong>Thanks, Priya!</strong> Splashback: <strong>' + val + '</strong> confirmed. Dan is ordering it today, delivery w/c 26 Oct.', false, 500);
+    phSay('<span class="ph-from">Dan Okafor · Site manager</span><strong>Thanks, Priya!</strong> Splashback: <strong>' + val + '</strong> confirmed. Dan is ordering it today, delivery w/c 26 Oct.', false, 500);
     const t = ph.querySelector('[data-ph="tile"]'); t.disabled = true; t.classList.remove('pulse'); t.textContent = 'Tile chosen ✓';
     if (phStage < 3) { phStage = 3; setStep(3); }
   };
@@ -1634,11 +1838,74 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
     if (a === 'reply') {
       b.disabled = true; const q = 'Could we see the tile samples on site?';
       phSay(q, true); addMsg(q, true, true); setStep(3);
-      setTimeout(() => { const r = 'Of course — I’ve left all three on the kitchen windowsill, labelled on the back.'; addMsg(r, false); phSay('<strong>Dan Okafor:</strong> ' + r, false); toast('Your reply landed in Messages for Dan and Laura.'); steps.forEach(li => { li.classList.remove('on'); li.classList.add('done'); }); }, 1600);
+      setTimeout(() => { const r = 'Of course — I’ve left all three on the kitchen windowsill, labelled on the back.'; addMsg(r, false); phSay('<span class="ph-from">Dan Okafor · Site manager</span>' + r, false); toast('Your reply landed in Messages for Dan and Laura.'); steps.forEach(li => { li.classList.remove('on'); li.classList.add('done'); }); }, 1600);
     }
   });
   phBind();
   document.getElementById('ph-restart').addEventListener('click', () => { ph.classList.remove('is-chat'); phBody.innerHTML = phInitial; ph.querySelector('[data-ph="reply"]').disabled = false; phStage = 0; setStep(0); phBind(); });
+
+  // Yard roles + site manager app (screen 2)
+  const ySite = document.getElementById('y-site'), yClient = document.getElementById('y-client');
+  const yProj = document.getElementById('y-proj'), yUser = document.getElementById('y-user');
+  const projClient = yProj.innerHTML, userClient = yUser.innerHTML;
+  const setRole = (r, fromRoute) => {
+    yard.querySelectorAll('[data-role]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.role === r)));
+    yClient.hidden = r !== 'client'; ySite.hidden = r !== 'site';
+    yProj.innerHTML = r === 'site' ? '<b>3 live jobs</b> · Wandsworth &amp; Lambeth' : projClient;
+    yUser.innerHTML = r === 'site' ? '<span class="y-av" aria-hidden="true" style="background:#2C2E2A">DO</span><span>Dan Okafor</span>' : userClient;
+    document.title = r === 'site' ? 'Wandle Yard · Site · Dan Okafor' : 'Wandle Yard · 14 Elms Crescent';
+    if (!fromRoute) { history.replaceState(null, '', r === 'site' ? '#yard-site' : '#yard'); window.scrollTo(0, 0); }
+  };
+  yard.querySelectorAll('[data-role]').forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
+
+  const smMain = document.getElementById('sm-main'), smSteps = [...document.querySelectorAll('#sm-steps .y-step')];
+  const smStep = n => smSteps.forEach((li, i) => { li.classList.toggle('on', i === n); li.classList.toggle('done', i < n); });
+  const smTitles = { today: 'Afternoon, Dan', jobs: 'Your jobs', inbox: 'Inbox', log: 'Log today', update: 'Friday update' };
+  const smGo = tab => {
+    ySite.querySelectorAll('[data-sm]').forEach(p => p.hidden = p.dataset.sm !== tab);
+    ySite.querySelectorAll('.sm-tabs [data-go]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.go === tab || (tab === 'update' && b.dataset.go === 'log'))));
+    document.getElementById('sm-title').textContent = smTitles[tab];
+    smMain.scrollTop = 0;
+    if (tab === 'inbox') smStep(1); if (tab === 'log') smStep(2); if (tab === 'update') smStep(3);
+  };
+  ySite.addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b && ySite.contains(b)) smGo(b.dataset.go); });
+
+  // inbox quick replies
+  ySite.querySelectorAll('[data-reply]').forEach(c => c.addEventListener('click', () => {
+    const t = document.getElementById('sm-thread'), d = document.createElement('div'); d.className = 'sm-msg me';
+    const sm = document.createElement('small'); sm.textContent = 'You · now '; const v = document.createElement('span'); v.className = 'via'; v.textContent = 'sent to WhatsApp'; sm.append(v);
+    d.append(sm, document.createTextNode(c.dataset.reply)); t.append(d);
+    document.getElementById('sm-quick').hidden = true; document.getElementById('sm-badge').hidden = true;
+    ySite.querySelector('.sm-alert.new')?.classList.remove('new');
+    toast('Sent. Priya & Sam see it on WhatsApp from “Dan Okafor · Site manager”.');
+  }));
+
+  // daily log
+  const smPhotos = [...ySite.querySelectorAll('#sm-photos .sm-ph:not(.add)')];
+  const smCount = () => { const n = smPhotos.filter(x => x.getAttribute('aria-pressed') === 'true').length; document.getElementById('sm-pcount').textContent = n + ' selected'; };
+  smPhotos.forEach(b => b.addEventListener('click', () => { b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true')); smCount(); }));
+  ySite.querySelector('.sm-ph.add').addEventListener('click', () => toast('On a real phone this opens the camera.'));
+  ySite.querySelectorAll('[data-group]').forEach(g => g.querySelectorAll('.sm-chip').forEach(c => c.addEventListener('click', () => g.querySelectorAll('.sm-chip').forEach(x => x.setAttribute('aria-pressed', String(x === c))))));
+  const smText = document.getElementById('sm-text'), smSave = document.getElementById('sm-save'), smVoice = document.getElementById('sm-voice');
+  smText.addEventListener('input', () => { smSave.disabled = !smText.value.trim(); });
+  smVoice.addEventListener('click', () => {
+    if (smVoice.classList.contains('rec')) return;
+    smVoice.classList.add('rec'); document.getElementById('sm-vlabel').textContent = 'Recording… 0:14';
+    setTimeout(() => {
+      smVoice.classList.remove('rec'); document.getElementById('sm-vlabel').textContent = 'Voice note added · 0:14';
+      smText.value = 'Screed down across the whole extension, curing well, no foot traffic till Wednesday. Plasterers finished the kitchen walls. Building control signed off the steel. Tile samples left on the kitchen windowsill for Priya and Sam.';
+      smSave.disabled = false; toast('Voice note turned into text. Edit it if you like.');
+    }, reduce ? 300 : 2200);
+  });
+  smSave.addEventListener('click', () => { smSave.hidden = true; document.getElementById('sm-saved').hidden = false; document.getElementById('sm-fri').classList.remove('todo'); document.getElementById('sm-built').textContent = 'Built from 5 daily logs, 38 photos and this week\u2019s client decisions.'; toast('Logged. Photos and notes filed to 14 Elms Crescent.'); });
+
+  // Friday update
+  document.getElementById('sm-edit').addEventListener('click', () => toast('Dan can tweak any line before it goes. Most weeks he just sends it.'));
+  document.getElementById('sm-send').addEventListener('click', e => { e.currentTarget.hidden = true; document.getElementById('sm-edit').hidden = true; document.getElementById('sm-sent').hidden = false; smSteps.forEach(li => { li.classList.remove('on'); li.classList.add('done'); }); });
+  document.getElementById('sm-asclient').addEventListener('click', () => {
+    setRole('client'); document.getElementById('ph-restart').click();
+    setTimeout(() => goTo('y-notify', true), 60); toast('This is what Priya & Sam received. Tap the notification.');
+  });
 
   // portal nav: in-page jumps + highlight the section in view
   const yLinks = [...yard.querySelectorAll('.y-nav a[href^="#y-"]')];
@@ -1653,13 +1920,14 @@ body.v-yard .hdr,body.v-yard .foot{display:none}
   const route = () => {
     let name = location.hash.slice(1);
     if (name.indexOf('case-') === 0) name = renderCase(name.slice(5)) ? 'case' : 'projects';
+    if (name === 'yard' || name === 'yard-site') { setRole(name === 'yard-site' ? 'site' : 'client', true); name = 'yard'; }
     const v = views.some(x => x.dataset.view === name) ? name : 'home';
     views.forEach(x => { x.hidden = x.dataset.view !== v; });
     document.body.className = 'v-' + v;
     drop.querySelectorAll('a').forEach(a => a.dataset.route === (v === 'case' ? 'projects' : v) ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
     setMenu(false);
     setPaused(v !== 'home' || document.hidden || userPaused);
-    if (v === 'yard') document.title = 'Wandle Yard · 14 Elms Crescent';
+    if (v === 'yard') document.title = ySite.hidden ? 'Wandle Yard · 14 Elms Crescent' : 'Wandle Yard · Site · Dan Okafor';
     else if (v !== 'case') document.title = 'Wandle Build · a 2204 Labs concept';
     window.scrollTo(0, 0);
   };
