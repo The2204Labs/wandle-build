@@ -908,6 +908,76 @@ body.v-login .login-link{display:none}
   .hdr-start{gap:12px}
 }
 
+
+/* ---------- office: job detail + settings ---------- */
+.of-table tbody tr{cursor:pointer;transition:background .15s}
+.of-table tbody tr:hover{background:#FAF9F6}
+.of-joblink{color:inherit;text-decoration:none}
+.of-joblink:hover b{text-decoration:underline;text-underline-offset:3px}
+.jd-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:end}
+.jd-back{display:inline-flex;align-items:center;gap:6px;color:var(--y-ink2);text-decoration:none;font-size:14px;margin-bottom:14px}
+.jd-back:hover{color:var(--y-ink)}
+.jd-head h1{margin:6px 0 8px;font-size:clamp(30px,3.4vw,50px);font-weight:600;letter-spacing:-.05em;line-height:1}
+.jd-head .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--y-ink2);font-size:14.5px}
+.jd-acts{display:flex;gap:8px;flex-wrap:wrap}
+.jd-form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;margin-top:16px}
+.jd-form .full{grid-column:1/-1}
+.jd-f{display:grid;gap:6px;align-content:start}
+.jd-f label{font:400 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--y-ink2)}
+.jd-f input,.jd-f select,.jd-f textarea{width:100%;min-height:44px;border:1px solid var(--y-line);border-radius:10px;background:#FBFAF8;padding:0 12px;font:400 15px var(--inner);color:var(--y-ink)}
+.jd-f textarea{min-height:84px;padding:10px 12px;resize:vertical;line-height:1.45}
+.jd-f select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235B5E57' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
+.jd-f input:focus,.jd-f select:focus,.jd-f textarea:focus{outline:2px solid var(--oak);outline-offset:1px;border-color:transparent}
+.jd-f small{font-size:12.5px;color:var(--y-ink2)}
+.jd-err{color:#9A3B26;font-size:13px;min-height:0}
+.jd-bar{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--y-line);padding-top:14px}
+.jd-dirty{font-size:13.5px;color:var(--y-warn);display:none;align-items:center;gap:6px}
+.jd-dirty i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.jd-dirty.on{display:inline-flex}
+.jd-kv{list-style:none;margin:12px 0 0;padding:0}
+.jd-kv li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--y-line);font-size:14.5px;font-variant-numeric:tabular-nums}
+.jd-kv li:first-child{border-top:0}
+.jd-kv span{color:var(--y-ink2)}
+.jd-kv b{font-weight:500;text-align:right}
+.jd-kv li.total b{font-weight:600}
+.jd-big{display:flex;align-items:baseline;gap:10px;margin:14px 0 10px}
+.jd-big b{font-size:clamp(30px,3vw,44px);font-weight:600;letter-spacing:-.05em;line-height:1}
+.jd-big span{color:var(--y-ink2)}
+.jd-pbar{height:12px;border-radius:999px;background:#ECE9E2;overflow:hidden;margin-bottom:6px}
+.jd-pbar i{display:block;height:100%;background:#2C2E2A;border-radius:999px;transition:width .5s var(--ease)}
+.jd-pbar.risk i{background:#B7791F}
+.jd-act{list-style:none;margin:12px 0 0;padding:0}
+.jd-act li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;padding:11px 0;border-top:1px solid var(--y-line);font-size:14.5px}
+.jd-act li:first-child{border-top:0}
+.jd-act time{font:400 12px var(--mono);color:var(--y-ink2);padding-top:2px}
+.st-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 0;border-top:1px solid var(--y-line)}
+.st-row:first-of-type{border-top:0}
+.st-row b{display:block;font-weight:500;font-size:15px}
+.st-row span{font-size:13.5px;color:var(--y-ink2)}
+.sw{position:relative;width:46px;height:28px;border-radius:999px;border:0;background:#D6D3CB;cursor:pointer;flex:none;transition:background .2s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .25s var(--ease)}
+.sw[aria-checked="true"]{background:#3E7B4F}
+.sw[aria-checked="true"]::after{transform:translateX(18px)}
+.st-sel{min-height:40px;border:1px solid var(--y-line);border-radius:10px;background:#FBFAF8;padding:0 30px 0 12px;font:400 14.5px var(--inner);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235B5E57' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;cursor:pointer;color:var(--y-ink)}
+.st-team{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+.st-team th{font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--y-ink2);text-align:left;padding:10px 12px 10px 0;border-bottom:1.5px solid var(--y-ink)}
+.st-team td{padding:11px 12px 11px 0;border-bottom:1px solid var(--y-line);vertical-align:middle}
+.st-team td .of-who{font-weight:500}
+.st-team td small{display:block;color:var(--y-ink2);font-size:12.5px}
+.st-invite{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;align-items:flex-end}
+.st-invite .jd-f{flex:1 1 220px}
+.st-apps{list-style:none;margin:12px 0 0;padding:0}
+.st-apps li{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--y-line)}
+.st-apps li:first-child{border-top:0}
+.st-apps .lo{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font:700 13px var(--inner);color:#fff}
+.st-apps b{display:block;font-weight:500;font-size:15px}
+.st-apps span{font-size:13px;color:var(--y-ink2)}
+@media (max-width:560px){
+  .jd-form{grid-template-columns:1fr}
+  .jd-head{grid-template-columns:1fr}
+  .jd-act li{grid-template-columns:1fr;gap:2px}
+}
+
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(159,210,127,.6)}70%,100%{box-shadow:0 0 0 9px rgba(159,210,127,0)}}
@@ -1694,9 +1764,10 @@ body.v-login .login-link{display:none}
       <a href="#of-pipeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg> Enquiries <span class="n" id="of-newcount">3</span></a>
       <a href="#of-cash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 6.5A4 4 0 0 0 9 9v11h8M6 13h7M6 20h12"/></svg> Cash flow</a>
       <a href="#of-team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 5.5 5"/></svg> Team</a>
+      <a href="#yard-settings" data-route="yard-settings" class="of-setlink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg> Settings</a>
       <a class="y-back" href="#home" data-route="home">← Back to wandle site</a>
     </nav>
-    <div class="y-main">
+    <div class="y-main" id="of-dash">
       <section class="y-card y-hero span12" id="of-overview">
         <div>
           <p class="mono">Tuesday 13 October · Office</p>
@@ -1735,14 +1806,14 @@ body.v-login .login-link{display:none}
       <section class="y-card span12" id="of-jobs" aria-labelledby="of-jb-t">
         <h2 id="of-jb-t">Live jobs <span class="mono" style="font-size:12px">11 jobs · £2.18m contract value</span></h2>
         <div class="of-filters" role="group" aria-label="Filter jobs">
-          <button type="button" aria-pressed="true" data-filter="all">All 11</button>
-          <button type="button" aria-pressed="false" data-filter="risk">Needs attention 3</button>
-          <button type="button" aria-pressed="false" data-filter="finishing">Finishing soon 2</button>
+          <button type="button" aria-pressed="true" data-filter="all" id="of-f-all">All 11</button>
+          <button type="button" aria-pressed="false" data-filter="risk" id="of-f-risk">Needs attention 3</button>
+          <button type="button" aria-pressed="false" data-filter="finishing" id="of-f-fin">Finishing soon 2</button>
         </div>
         <div class="of-tablewrap">
           <table class="of-table">
             <thead><tr><th>Job</th><th>Type</th><th>Programme</th><th>Status</th><th>Site manager</th><th>Extras</th><th>Margin</th><th>Next payment</th><th></th></tr></thead>
-            <tbody>
+            <tbody id="of-tbody">
           <tr data-f="all"><td><b>14 Elms Crescent</b><small>Clapham SW4</small></td><td>Rear extension</td><td><div class="of-prog"><div class="bar"><i style="width:73%"></i></div><span>wk 19/26</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>£600</td><td>21%</td><td><b>£37,280</b><small>23 Oct</small></td><td><a class="of-link" href="#yard" data-route="yard">Open as client →</a></td></tr>
           <tr data-f="all risk"><td><b>22 Heathfield Gdns</b><small>Wandsworth SW18</small></td><td>Mansard loft</td><td><div class="of-prog risk"><div class="bar"><i style="width:38%"></i></div><span>wk 6/16</span></div></td><td><span class="pill warn"><i></i>2 days lost</span></td><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>£0</td><td>18%</td><td><b>£14,100</b><small>30 Oct</small></td><td></td></tr>
           <tr data-f="all"><td><b>8 Trinity Road</b><small>Tooting SW17</small></td><td>Loft + ensuite</td><td><div class="of-prog"><div class="bar"><i style="width:79%"></i></div><span>wk 11/14</span></div></td><td><span class="pill ok"><i></i>On track</span></td><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>£1,240</td><td>23%</td><td><b>£12,900</b><small>16 Oct</small></td><td></td></tr>
@@ -1770,6 +1841,82 @@ body.v-login .login-link{display:none}
         <h2 id="of-cs-t">Cash flow · stage payments due <span class="mono" style="font-size:12px">Next 8 weeks · £464k</span></h2>
         <div class="of-cash" role="img" aria-label="Stage payments due per week over the next 8 weeks, from 29 to 95 thousand pounds; week of 26 October is the highest at 95 thousand."><div class="now"><span>£52k</span><i style="height:52%"></i></div><div><span>£37k</span><i style="height:37%"></i></div><div><span>£95k</span><i style="height:95%"></i></div><div><span>£41k</span><i style="height:41%"></i></div><div><span>£64k</span><i style="height:64%"></i></div><div><span>£88k</span><i style="height:88%"></i></div><div><span>£29k</span><i style="height:29%"></i></div><div><span>£58k</span><i style="height:58%"></i></div></div>
         <div class="of-cash-x" aria-hidden="true"><span>12 Oct</span><span>19 Oct</span><span>26 Oct</span><span>2 Nov</span><span>9 Nov</span><span>16 Nov</span><span>23 Nov</span><span>30 Nov</span></div>
+      </section>
+    </div>
+
+    <div class="y-main" id="of-job" hidden aria-live="polite"></div>
+    <div class="y-main" id="of-settings" hidden>
+      <section class="y-card span12 jd-head">
+        <div><a class="jd-back" href="#yard-office" data-route="yard-office">← Office overview</a><p class="mono" style="color:var(--y-ink2)">Wandle Build · workspace</p><h1>Settings</h1><div class="meta">How Yard talks to your clients, who can see what, and the apps it connects to.</div></div>
+      </section>
+
+      <section class="y-card span7" aria-labelledby="st-n-t">
+        <h2 id="st-n-t">Client notifications</h2>
+        <p class="y-sub">How updates reach homeowners. Everything is also kept in their portal.</p>
+        <div style="margin-top:8px">
+          <div class="st-row"><div><b id="st-wa-l">WhatsApp updates</b><span>Weekly update, decisions due and reminders, from the Wandle number.</span></div><button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="st-wa-l" data-sw="wa"></button></div>
+          <div class="st-row"><div><b id="st-email-l">Email copy</b><span>A written record of every update, sent to the client too.</span></div><button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="st-email-l" data-sw="email"></button></div>
+          <div class="st-row"><div><b id="st-sms-l">SMS for urgent site notices</b><span>Deliveries, access and anything time-critical.</span></div><button type="button" class="sw" role="switch" aria-checked="false" aria-labelledby="st-sms-l" data-sw="sms"></button></div>
+          <div class="st-row"><div><b id="st-otp-l">One-time code for signatures and payments</b><span>A 6-digit code before anything legal or money-related. Recommended.</span></div><button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="st-otp-l" data-sw="otp"></button></div>
+          <div class="st-row"><div><b>Weekly update goes out</b><span>Drafted from the site logs; the site manager checks it first.</span></div><div style="display:flex;gap:6px"><select class="st-sel" aria-label="Day" data-save><option>Thursday</option><option selected>Friday</option></select><select class="st-sel" aria-label="Time" data-save><option>15:00</option><option selected>16:00</option><option>17:00</option></select></div></div>
+        </div>
+      </section>
+
+      <section class="y-card span5" aria-labelledby="st-p-t">
+        <h2 id="st-p-t">Client portal</h2>
+        <p class="y-sub">What homeowners see when they open Yard.</p>
+        <div style="margin-top:8px">
+          <div class="st-row"><div><b id="st-extras-l">Approve extras online</b><span>Nothing extra is built until the client approves it here.</span></div><button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="st-extras-l" data-sw="extras"></button></div>
+          <div class="st-row"><div><b id="st-photos-l">Weekly photo diary</b><span>Photos from the site manager’s daily logs.</span></div><button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="st-photos-l" data-sw="photos"></button></div>
+          <div class="st-row"><div><b id="st-pay-l">Show stage payments</b><span>Schedule, paid to date and what’s next.</span></div><button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="st-pay-l" data-sw="pay"></button></div>
+          <div class="st-row"><div><b>Portal after handover</b><span>For the warranty, home manual and issues.</span></div><select class="st-sel" aria-label="Portal after handover" data-save><option>2 years</option><option>5 years</option><option selected>10 years</option></select></div>
+        </div>
+      </section>
+
+      <section class="y-card span12" aria-labelledby="st-t-t">
+        <h2 id="st-t-t">Team &amp; roles <span class="mono" style="font-size:12px">Staff sign in with their Microsoft 365 account</span></h2>
+        <p class="y-sub">Each role decides what someone can see. Site managers only ever see their own jobs.</p>
+        <div class="of-tablewrap">
+          <table class="st-team">
+            <thead><tr><th>Person</th><th>Work email</th><th>Role</th><th>Can see</th></tr></thead>
+            <tbody id="st-team">
+              <tr><td><span class="of-who"><i>TH</i>Tom Hale</span></td><td>tom@wandlebuild.co.uk</td><td><select class="st-sel" data-role-sel id="st-r-0" aria-label="Role"><option value="dir" selected>Director</option><option value="head">Head of projects</option><option value="site">Site manager</option><option value="cs">Client services</option></select></td><td data-access>Everything, including margins</td></tr>
+              <tr><td><span class="of-who"><i>LB</i>Laura Byrne</span></td><td>laura@wandlebuild.co.uk</td><td><select class="st-sel" data-role-sel id="st-r-1" aria-label="Role"><option value="dir">Director</option><option value="head" selected>Head of projects</option><option value="site">Site manager</option><option value="cs">Client services</option></select></td><td data-access>All live jobs and enquiries</td></tr>
+              <tr><td><span class="of-who"><i>DO</i>Dan Okafor</span></td><td>dan@wandlebuild.co.uk</td><td><select class="st-sel" data-role-sel id="st-r-2" aria-label="Role"><option value="dir">Director</option><option value="head">Head of projects</option><option value="site" selected>Site manager</option><option value="cs">Client services</option></select></td><td data-access>Only their own jobs</td></tr>
+              <tr><td><span class="of-who"><i>SM</i>Sophie Marsh</span></td><td>sophie@wandlebuild.co.uk</td><td><select class="st-sel" data-role-sel id="st-r-3" aria-label="Role"><option value="dir">Director</option><option value="head">Head of projects</option><option value="site" selected>Site manager</option><option value="cs">Client services</option></select></td><td data-access>Only their own jobs</td></tr>
+              <tr><td><span class="of-who"><i>MR</i>Marcus Reid</span></td><td>marcus@wandlebuild.co.uk</td><td><select class="st-sel" data-role-sel id="st-r-4" aria-label="Role"><option value="dir">Director</option><option value="head">Head of projects</option><option value="site" selected>Site manager</option><option value="cs">Client services</option></select></td><td data-access>Only their own jobs</td></tr>
+              <tr><td><span class="of-who"><i>EW</i>Ella Ward</span></td><td>ella@wandlebuild.co.uk</td><td><select class="st-sel" data-role-sel id="st-r-5" aria-label="Role"><option value="dir">Director</option><option value="head">Head of projects</option><option value="site">Site manager</option><option value="cs" selected>Client services</option></select></td><td data-access>Enquiries and client messages</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <form class="st-invite" id="st-invite" novalidate>
+          <div class="jd-f"><label for="st-inv-email">Invite a teammate</label><input id="st-inv-email" type="email" placeholder="name@wandlebuild.co.uk" autocomplete="off"></div>
+          <div class="jd-f" style="flex:0 1 200px"><label for="st-inv-role">Role</label><select id="st-inv-role"><option value="dir">Director</option><option value="head">Head of projects</option><option value="site" selected>Site manager</option><option value="cs">Client services</option></select></div>
+          <button class="y-btn" type="submit" style="min-height:44px">Send invite</button>
+          <span class="jd-err" id="st-inv-err" style="flex-basis:100%" aria-live="polite"></span>
+        </form>
+      </section>
+
+      <section class="y-card span7" aria-labelledby="st-c-t">
+        <h2 id="st-c-t">Company</h2>
+        <form class="jd-form" id="st-company" novalidate>
+          <div class="jd-f"><label for="st-co-name">Company name</label><input id="st-co-name" value="Wandle Build Ltd"></div>
+          <div class="jd-f"><label for="st-co-no">Company number</label><input id="st-co-no" value="07184392" inputmode="numeric"></div>
+          <div class="jd-f"><label for="st-co-vat">VAT number</label><input id="st-co-vat" value="GB 912 3456 78"></div>
+          <div class="jd-f"><label for="st-co-wa">WhatsApp business number</label><input id="st-co-wa" value="020 8870 4412" inputmode="tel"><small>Clients see “Wandle Build” as the chat name.</small></div>
+          <div class="jd-f full"><label for="st-co-addr">Registered office</label><input id="st-co-addr" value="Unit 4, Garratt Lane Works, London SW18 4DJ"></div>
+          <div class="jd-bar"><span class="jd-dirty" id="st-co-dirty"><i></i>Unsaved changes</span><button class="y-btn" type="submit" id="st-co-save" disabled>Save company details</button></div>
+        </form>
+      </section>
+
+      <section class="y-card span5" aria-labelledby="st-a-t">
+        <h2 id="st-a-t">Connected apps</h2>
+        <ul class="st-apps">
+          <li><span class="lo" style="background:#25A35A">W</span><div><b>WhatsApp Business</b><span>020 8870 4412 · verified business</span></div><span class="pill ok"><i></i>Connected</span></li>
+          <li><span class="lo" style="background:#13B5EA">X</span><div><b>Xero</b><span>Stage invoices and payments sync nightly</span></div><span class="pill ok"><i></i>Connected</span></li>
+          <li><span class="lo" style="background:#2F5A8A">M</span><div><b>Microsoft 365</b><span>Staff sign-in and calendars</span></div><span class="pill ok"><i></i>Connected</span></li>
+          <li><span class="lo" style="background:#8A8C85">G</span><div><b>Google Calendar</b><span>Survey bookings for clients who use Gmail</span></div><button class="y-btn ghost" type="button" id="st-gcal">Connect</button></li>
+        </ul>
       </section>
     </div>
   </div>
@@ -2127,7 +2274,7 @@ body.v-login .login-link{display:none}
     document.title = ROLES[r].title;
     if (!fromRoute) { history.replaceState(null, '', ROLES[r].hash); window.scrollTo(0, 0); }
   };
-  yard.querySelectorAll('[data-role]').forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
+  yard.querySelectorAll('[data-role]').forEach(b => b.addEventListener('click', () => { setRole(b.dataset.role); if (b.dataset.role === 'office' && typeof ofView === 'function') ofView('dash'); }));
 
   const smMain = document.getElementById('sm-main'), smSteps = [...document.querySelectorAll('#sm-steps .y-step')];
   const smStep = n => smSteps.forEach((li, i) => { li.classList.toggle('on', i === n); li.classList.toggle('done', i < n); });
@@ -2178,6 +2325,186 @@ body.v-login .login-link{display:none}
     setTimeout(() => goTo('y-notify', true), 60); toast('This is what Priya & Sam received. Tap the notification.');
   });
 
+  // office: jobs table, job detail/edit pages and settings
+  const JOBS = [{"slug": "elms", "addr": "14 Elms Crescent", "area": "Clapham SW4", "type": "Rear extension", "week": 19, "total": 26, "status": "ok", "label": "On track", "mgr": "Dan Okafor", "extras": 600, "margin": 21, "next": "£37,280", "due": "23 Oct", "client": "Priya & Sam Shah", "email": "priya@example.com", "contract": 186400, "paid": 121160, "milestone": "Glazing installed · w/c 19 Oct", "portal": true, "opened": "2 hours ago", "decisions": 2}, {"slug": "heathfield", "addr": "22 Heathfield Gardens", "area": "Wandsworth SW18", "type": "Mansard loft", "week": 6, "total": 16, "status": "risk", "label": "2 days lost", "mgr": "Dan Okafor", "extras": 0, "margin": 18, "next": "£14,100", "due": "30 Oct", "client": "James & Ola Bennett", "email": "james@example.com", "contract": 94000, "milestone": "Steel frame up · w/c 26 Oct", "opened": "yesterday", "decisions": 1}, {"slug": "trinity", "addr": "8 Trinity Road", "area": "Tooting SW17", "type": "Loft + ensuite", "week": 11, "total": 14, "status": "ok", "label": "On track", "mgr": "Dan Okafor", "extras": 1240, "margin": 23, "next": "£12,900", "due": "16 Oct", "client": "Nadia Rahman", "email": "nadia@example.com", "contract": 64500, "milestone": "Ensuite tiling · w/c 19 Oct", "opened": "3 days ago", "decisions": 0}, {"slug": "abbeville", "addr": "31 Abbeville Road", "area": "Clapham SW4", "type": "Kitchen extension", "week": 9, "total": 18, "status": "risk", "label": "Supplier delay", "mgr": "Sophie Marsh", "extras": 2350, "margin": 17, "next": "£19,800", "due": "6 Nov", "client": "Tom & Ella Greene", "email": "tom.g@example.com", "contract": 132000, "milestone": "Kitchen units arrive · w/c 26 Oct", "opened": "today", "decisions": 1}, {"slug": "nightingale", "addr": "41 Nightingale Lane", "area": "Balham SW12", "type": "Side return", "week": 14, "total": 16, "status": "pay", "label": "Payment overdue", "mgr": "Sophie Marsh", "extras": 880, "margin": 22, "next": "£22,400", "due": "Overdue 6 days", "client": "Laura Mitchell", "email": "laura.m@example.com", "contract": 112000, "milestone": "Second fix · w/c 19 Oct", "opened": "6 days ago", "decisions": 0}, {"slug": "ellerton", "addr": "56 Ellerton Road", "area": "Earlsfield SW18", "type": "Rear extension", "week": 2, "total": 20, "status": "ok", "label": "On track", "mgr": "Sophie Marsh", "extras": 0, "margin": 21, "next": "£28,000", "due": "3 Nov", "client": "Ben & Chloe Hart", "email": "ben@example.com", "contract": 141000, "milestone": "Foundations poured · w/c 19 Oct", "opened": "today", "decisions": 1}, {"slug": "ashlone", "addr": "9 Ashlone Road", "area": "Putney SW15", "type": "Loft conversion", "week": 12, "total": 12, "status": "snag", "label": "Snagging", "mgr": "Sophie Marsh", "extras": 420, "margin": 24, "next": "£9,750", "due": "At handover", "client": "Owen & Mia Price", "email": "owen@example.com", "contract": 65000, "milestone": "Handover walk-round · Fri 16 Oct", "opened": "today", "decisions": 0}, {"slug": "lavender", "addr": "7 Lavender Gardens", "area": "Battersea SW11", "type": "Whole-house refurb", "week": 4, "total": 30, "status": "ok", "label": "On track", "mgr": "Marcus Reid", "extras": 0, "margin": 20, "next": "£41,000", "due": "20 Nov", "client": "Ruth Okoye", "email": "ruth@example.com", "contract": 205000, "milestone": "First fix electrics · w/c 26 Oct", "opened": "2 days ago", "decisions": 2}, {"slug": "ravenna", "addr": "19 Ravenna Road", "area": "Putney SW15", "type": "Basement", "week": 22, "total": 44, "status": "ok", "label": "On track", "mgr": "Marcus Reid", "extras": 5600, "margin": 19, "next": "£58,000", "due": "27 Oct", "client": "Richard & Mei Wong", "email": "richard@example.com", "contract": 365000, "milestone": "Basement slab pour · Wed 14 Oct", "opened": "yesterday", "decisions": 0}, {"slug": "kenilworth", "addr": "3 Kenilworth Avenue", "area": "Wimbledon SW19", "type": "New build", "week": 31, "total": 58, "status": "ok", "label": "On track", "mgr": "Marcus Reid", "extras": 3210, "margin": 16, "next": "£64,000", "due": "13 Nov", "client": "The Wrights", "email": "wright@example.com", "contract": 774500, "milestone": "Roof watertight · w/c 2 Nov", "opened": "4 days ago", "decisions": 1}, {"slug": "northcote-rd", "addr": "27 Northcote Road", "area": "Battersea SW11", "type": "Kitchen & bath", "week": 3, "total": 8, "status": "ok", "label": "On track", "mgr": "Marcus Reid", "extras": 0, "margin": 25, "next": "£8,200", "due": "30 Oct", "client": "Lucy Tran", "email": "lucy@example.com", "contract": 41000, "milestone": "Kitchen fit · w/c 26 Oct", "opened": "yesterday", "decisions": 1}];
+  const TODAY = new Date(2026, 9, 13);
+  const MON = new Date(2026, 9, 12);
+  const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+  const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const fmt = v => new Date(v + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const gbp0 = n => '£' + Math.round(n).toLocaleString('en-GB');
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const STATUS = { ok: ['ok', 'On track'], risk: ['warn', 'At risk'], pay: ['warn', 'Payment overdue'], snag: ['mute', 'Snagging'], hold: ['mute', 'On hold'] };
+  const MGRS = { 'Dan Okafor': 'DO', 'Sophie Marsh': 'SM', 'Marcus Reid': 'MR' };
+  JOBS.forEach(j => {
+    j.start = iso(addDays(MON, -(j.week - 1) * 7));
+    j.handover = iso(addDays(new Date(j.start + 'T12:00:00'), j.total * 7 - 3));
+    if (!j.paid) j.paid = Math.round(j.contract * Math.min(.95, (j.week / j.total) * .9) / 10) * 10;
+    j.note = j.note || '';
+  });
+  const jobFilters = j => ['all'].concat(['risk', 'pay', 'hold'].includes(j.status) ? ['risk'] : [], j.total - j.week <= 2 ? ['finishing'] : []);
+  let jobFilter = 'all';
+  const renderJobs = () => {
+    document.getElementById('of-tbody').innerHTML = JOBS.map(j => {
+      const st = STATUS[j.status], pct = Math.round(j.week / j.total * 100);
+      return '<tr data-job="' + j.slug + '" data-f="' + jobFilters(j).join(' ') + '"' + (jobFilters(j).includes(jobFilter) ? '' : ' hidden') + '>'
+        + '<td><a class="of-joblink" href="#yard-job-' + j.slug + '" data-route="yard-job-' + j.slug + '"><b>' + esc(j.addr) + '</b></a><small>' + esc(j.area) + '</small></td>'
+        + '<td>' + esc(j.type) + '</td>'
+        + '<td><div class="of-prog' + (['risk', 'pay', 'hold'].includes(j.status) ? ' risk' : '') + '"><div class="bar"><i style="width:' + pct + '%"></i></div><span>wk ' + j.week + '/' + j.total + '</span></div></td>'
+        + '<td><span class="pill ' + st[0] + '"><i></i>' + esc(j.label) + '</span></td>'
+        + '<td><span class="of-who"><i>' + MGRS[j.mgr] + '</i>' + esc(j.mgr) + '</span></td>'
+        + '<td>' + gbp0(j.extras) + '</td><td>' + j.margin + '%</td>'
+        + '<td><b>' + esc(j.next) + '</b><small>' + esc(j.due) + '</small></td>'
+        + '<td><a class="of-link" href="#yard-job-' + j.slug + '" data-route="yard-job-' + j.slug + '">Open →</a></td></tr>';
+    }).join('');
+    const n = f => JOBS.filter(j => jobFilters(j).includes(f)).length;
+    document.getElementById('of-f-all').textContent = 'All ' + n('all');
+    document.getElementById('of-f-risk').textContent = 'Needs attention ' + n('risk');
+    document.getElementById('of-f-fin').textContent = 'Finishing soon ' + n('finishing');
+  };
+  yOffice.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => { jobFilter = b.dataset.filter; }));
+  renderJobs();
+  document.getElementById('of-tbody').addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    const tr = e.target.closest('tr[data-job]'); if (!tr) return;
+    history.pushState(null, '', '#yard-job-' + tr.dataset.job); route();
+  });
+
+  const ofDash = document.getElementById('of-dash'), ofJob = document.getElementById('of-job'), ofSet = document.getElementById('of-settings');
+  let ofTitle = '';
+  const ofView = (v, title) => {
+    ofDash.hidden = v !== 'dash'; ofJob.hidden = v !== 'job'; ofSet.hidden = v !== 'settings';
+    ofTitle = title || '';
+    yOffice.querySelector('.of-setlink').classList.toggle('on', v === 'settings');
+    yOffice.querySelectorAll('.y-nav a[href^="#of-"]').forEach((a, i) => a.classList.toggle('on', v === 'dash' && i === 0));
+  };
+  const ACT = j => [
+    ['Today 07:52', j.mgr + ' logged the day · 6 photos'],
+    ['Yesterday', j.decisions ? 'Decision sent to client · due in 5 days' : 'Weekly update opened by the client'],
+    ['Fri 16:02', 'Weekly update sent on WhatsApp'],
+    ['Thu 11:20', j.extras ? 'Client approved an extra · ' + gbp0(Math.min(j.extras, 1180)) : 'Building control inspection booked'],
+    [fmt(j.start), 'Job started · ' + j.mgr + ' assigned']
+  ];
+  const openJob = slug => {
+    const j = JOBS.find(x => x.slug === slug);
+    if (!j) { ofView('dash'); return false; }
+    const st = STATUS[j.status], pct = Math.round(j.week / j.total * 100);
+    const mgrOpts = Object.keys(MGRS).map(m => '<option' + (m === j.mgr ? ' selected' : '') + '>' + m + '</option>').join('');
+    const stOpts = Object.keys(STATUS).map(k => '<option value="' + k + '"' + (k === j.status ? ' selected' : '') + '>' + STATUS[k][1] + '</option>').join('');
+    ofJob.innerHTML = `
+      <section class="y-card span12 jd-head">
+        <div>
+          <a class="jd-back" href="#yard-office" data-route="yard-office">← All jobs</a>
+          <p class="mono" style="color:var(--y-ink2)">Job · ${esc(j.type)}</p>
+          <h1>${esc(j.addr)}</h1>
+          <div class="meta"><span>${esc(j.area)}</span><span>·</span><span>${esc(j.client)}</span><span class="pill ${st[0]}"><i></i>${esc(j.label)}</span></div>
+        </div>
+        <div class="jd-acts">
+          ${j.portal ? '<a class="y-btn" href="#yard" data-route="yard">Open client portal <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>' : '<button class="y-btn" type="button" data-jd-portal>Open client portal <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>'}
+          <button class="y-btn ghost" type="button" data-jd-wa>Message client</button>
+        </div>
+      </section>
+      <section class="y-card span7" aria-labelledby="jd-e-t">
+        <h2 id="jd-e-t">Edit job</h2>
+        <form class="jd-form" id="jd-form" novalidate>
+          <div class="jd-f"><label for="jd-status">Status</label><select id="jd-status">${stOpts}</select></div>
+          <div class="jd-f"><label for="jd-mgr">Site manager</label><select id="jd-mgr">${mgrOpts}</select></div>
+          <div class="jd-f"><label for="jd-start">Start on site</label><input id="jd-start" type="date" value="${j.start}"></div>
+          <div class="jd-f"><label for="jd-hand">Handover</label><input id="jd-hand" type="date" value="${j.handover}"><small>Changing this updates the client's programme.</small></div>
+          <div class="jd-f"><label for="jd-week">Current week</label><input id="jd-week" type="number" min="1" value="${j.week}" inputmode="numeric"></div>
+          <div class="jd-f"><label for="jd-total">Weeks on site</label><input id="jd-total" type="number" min="1" value="${j.total}" inputmode="numeric"></div>
+          <div class="jd-f full"><label for="jd-mile">Next milestone</label><input id="jd-mile" value="${esc(j.milestone)}"></div>
+          <div class="jd-f full"><label for="jd-note">Internal note</label><textarea id="jd-note" placeholder="Only Wandle staff see this.">${esc(j.note)}</textarea></div>
+          <span class="jd-err full" id="jd-err" aria-live="polite"></span>
+          <div class="jd-bar"><span class="jd-dirty" id="jd-dirty"><i></i>Unsaved changes</span><span style="display:flex;gap:8px"><button class="y-btn ghost" type="button" id="jd-cancel" disabled>Cancel</button><button class="y-btn" type="submit" id="jd-save" disabled>Save changes</button></span></div>
+        </form>
+      </section>
+      <section class="y-card span5" aria-labelledby="jd-c-t">
+        <h2 id="jd-c-t">Client</h2>
+        <ul class="jd-kv">
+          <li><span>Name</span><b>${esc(j.client)}</b></li>
+          <li><span>Email</span><b>${esc(j.email.replace(/^(.).*(@.*)$/, '$1•••$2'))}</b></li>
+          <li><span>WhatsApp</span><b><span class="pill ok"><i></i>Opted in</span></b></li>
+          <li><span>Portal last opened</span><b>${esc(j.opened)}</b></li>
+          <li><span>Decisions waiting</span><b>${j.decisions}</b></li>
+        </ul>
+      </section>
+      <section class="y-card span6" aria-labelledby="jd-p-t">
+        <h2 id="jd-p-t">Programme</h2>
+        <div class="jd-big"><b id="jd-wk">Week ${j.week}</b><span id="jd-of">of ${j.total}</span></div>
+        <div class="jd-pbar${j.status !== 'ok' ? ' risk' : ''}"><i id="jd-pbar" style="width:${pct}%"></i></div>
+        <ul class="jd-kv">
+          <li><span>Started</span><b id="jd-v-start">${fmt(j.start)}</b></li>
+          <li><span>Handover</span><b id="jd-v-hand">${fmt(j.handover)}</b></li>
+          <li><span>Next milestone</span><b id="jd-v-mile">${esc(j.milestone)}</b></li>
+        </ul>
+      </section>
+      <section class="y-card span6" aria-labelledby="jd-m-t">
+        <h2 id="jd-m-t">Money</h2>
+        <div class="jd-big"><b>${gbp0(j.paid)}</b><span>paid of ${gbp0(j.contract + j.extras)}</span></div>
+        <div class="jd-pbar"><i style="width:${Math.round(j.paid / (j.contract + j.extras) * 100)}%"></i></div>
+        <ul class="jd-kv">
+          <li><span>Fixed contract</span><b>${gbp0(j.contract)}</b></li>
+          <li><span>Approved extras</span><b>${gbp0(j.extras)}</b></li>
+          <li><span>Margin</span><b>${j.margin}%</b></li>
+          <li class="total"><span>Next payment</span><b>${esc(j.next)} · ${esc(j.due)}</b></li>
+        </ul>
+      </section>
+      <section class="y-card span12" aria-labelledby="jd-a-t">
+        <h2 id="jd-a-t">Activity</h2>
+        <ul class="jd-act">${ACT(j).map(a => '<li><time>' + esc(a[0]) + '</time><span>' + esc(a[1]) + '</span></li>').join('')}</ul>
+      </section>`;
+    const form = document.getElementById('jd-form'), save = document.getElementById('jd-save'), cancel = document.getElementById('jd-cancel'), dirty = document.getElementById('jd-dirty');
+    const setDirty = v => { save.disabled = !v; cancel.disabled = !v; dirty.classList.toggle('on', v); };
+    form.addEventListener('input', () => setDirty(true));
+    form.addEventListener('change', () => setDirty(true));
+    cancel.addEventListener('click', () => openJob(slug));
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const g = id => document.getElementById(id).value, err = document.getElementById('jd-err');
+      const week = parseInt(g('jd-week'), 10), total = parseInt(g('jd-total'), 10);
+      if (!total || !week || week < 1 || week > total) { err.textContent = 'Current week must be between 1 and the weeks on site (' + (total || '?') + ').'; document.getElementById('jd-week').focus(); return; }
+      if (!g('jd-start') || !g('jd-hand') || g('jd-hand') <= g('jd-start')) { err.textContent = 'Handover has to be after the start date.'; document.getElementById('jd-hand').focus(); return; }
+      err.textContent = '';
+      const datesMoved = g('jd-hand') !== j.handover;
+      const statusChanged = g('jd-status') !== j.status;
+      Object.assign(j, { status: g('jd-status'), mgr: g('jd-mgr'), start: g('jd-start'), handover: g('jd-hand'), week, total, milestone: g('jd-mile'), note: g('jd-note') });
+      if (statusChanged) j.label = STATUS[j.status][1];
+      renderJobs(); openJob(slug);
+      toast(datesMoved ? 'Saved. ' + j.client + ' will see the new handover date in their portal.' : 'Saved.');
+    });
+    ofJob.querySelector('[data-jd-wa]').addEventListener('click', () => toast('Opens the job conversation. Messages go to ' + j.client + ' on WhatsApp from “Wandle Build”.'));
+    const pb = ofJob.querySelector('[data-jd-portal]');
+    if (pb) pb.addEventListener('click', () => toast('In the demo, only 14 Elms Crescent has a full client portal.'));
+    ofView('job', j.addr + ' · Wandle Yard');
+    return true;
+  };
+
+  // settings
+  ofSet.querySelectorAll('[data-sw]').forEach(b => b.addEventListener('click', () => {
+    const on = b.getAttribute('aria-checked') !== 'true'; b.setAttribute('aria-checked', String(on));
+    const name = document.getElementById(b.getAttribute('aria-labelledby')).textContent;
+    toast(b.dataset.sw === 'otp' && !on ? 'One-time codes turned off. Not recommended for signatures and payments.' : name + (on ? ' turned on.' : ' turned off.'));
+  }));
+  ofSet.querySelectorAll('[data-save]').forEach(x => x.addEventListener('change', () => toast('Saved.')));
+  const ACCESS = { dir: 'Everything, including margins', head: 'All live jobs and enquiries', site: 'Only their own jobs', cs: 'Enquiries and client messages' };
+  const bindRole = sel => sel.addEventListener('change', () => { sel.closest('tr').querySelector('[data-access]').textContent = ACCESS[sel.value]; toast('Role updated. Their access changes next time they open Yard.'); });
+  ofSet.querySelectorAll('[data-role-sel]').forEach(bindRole);
+  document.getElementById('st-invite').addEventListener('submit', e => {
+    e.preventDefault();
+    const em = document.getElementById('st-inv-email'), err = document.getElementById('st-inv-err'), role = document.getElementById('st-inv-role');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim())) { err.textContent = 'Enter a work email address, e.g. name@wandlebuild.co.uk.'; em.focus(); return; }
+    err.textContent = '';
+    const tr = document.createElement('tr'), name = em.value.trim().split('@')[0];
+    tr.innerHTML = '<td><span class="of-who"><i>' + esc(name.slice(0, 2).toUpperCase()) + '</i>' + esc(name) + '</span><small>Invite sent · not signed in yet</small></td><td>' + esc(em.value.trim()) + '</td><td>' + esc(role.options[role.selectedIndex].text) + '</td><td data-access>' + ACCESS[role.value] + '</td>';
+    document.getElementById('st-team').append(tr); em.value = '';
+    toast('Invite sent. They sign in with their Microsoft 365 account.');
+  });
+  const co = document.getElementById('st-company');
+  co.addEventListener('input', () => { document.getElementById('st-co-save').disabled = false; document.getElementById('st-co-dirty').classList.add('on'); });
+  co.addEventListener('submit', e => { e.preventDefault(); document.getElementById('st-co-save').disabled = true; document.getElementById('st-co-dirty').classList.remove('on'); toast('Company details saved.'); });
+  document.getElementById('st-gcal').addEventListener('click', e => { toast('This would open Google’s own sign-in to connect a calendar.'); });
+
   // office dashboard (screen 3)
   yOffice.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
     yOffice.querySelectorAll('[data-filter]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
@@ -2217,7 +2544,7 @@ body.v-login .login-link{display:none}
 
   // portal nav: in-page jumps + highlight the section in view
   const yLinks = [...yard.querySelectorAll('.y-nav a[href^="#y-"], .y-nav a[href^="#of-"]')];
-  yLinks.forEach(a => a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
+  yLinks.forEach(a => a.addEventListener('click', e => { e.preventDefault(); if (a.getAttribute('href').indexOf('#of-') === 0 && ofDash.hidden) { history.pushState(null, '', '#yard-office'); ofView('dash'); document.title = ROLES.office.title; } document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) yLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id)); }), { rootMargin: '-35% 0px -60% 0px' });
     yLinks.forEach(a => io.observe(document.querySelector(a.getAttribute('href'))));
@@ -2242,14 +2569,16 @@ body.v-login .login-link{display:none}
   const route = () => {
     let name = location.hash.slice(1);
     if (name.indexOf('case-') === 0) name = renderCase(name.slice(5)) ? 'case' : 'projects';
-    if (name === 'yard' || name === 'yard-site' || name === 'yard-office') { setRole(name === 'yard-site' ? 'site' : name === 'yard-office' ? 'office' : 'client', true); name = 'yard'; }
+    if (name === 'yard' || name === 'yard-site' || name === 'yard-office') { setRole(name === 'yard-site' ? 'site' : name === 'yard-office' ? 'office' : 'client', true); if (name === 'yard-office') ofView('dash'); name = 'yard'; }
+    else if (name === 'yard-settings') { setRole('office', true); ofView('settings', 'Settings · Wandle Yard'); name = 'yard'; }
+    else if (name.indexOf('yard-job-') === 0) { setRole('office', true); openJob(name.slice(9)); name = 'yard'; }
     const v = views.some(x => x.dataset.view === name) ? name : 'home';
     views.forEach(x => { x.hidden = x.dataset.view !== v; });
     document.body.className = 'v-' + v;
     drop.querySelectorAll('a').forEach(a => a.dataset.route === (v === 'case' ? 'projects' : v) ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
     setMenu(false);
     setPaused(v !== 'home' || document.hidden || userPaused);
-    if (v === 'yard') document.title = ROLES[yRole].title;
+    if (v === 'yard') document.title = (yRole === 'office' && ofTitle) ? ofTitle : ROLES[yRole].title;
     else if (v === 'login') { document.title = 'Client login · Wandle Yard'; lgForm.hidden = false; document.getElementById('lg-sent').hidden = true; }
     else if (v !== 'case') document.title = 'Wandle Build · a 2204 Labs concept';
     window.scrollTo(0, 0);
